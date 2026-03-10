@@ -51,8 +51,8 @@
 
 ## 7. 驗收與收尾
 
-- [ ] 7.1 執行 `hugo -s hugo/ --minify` 確認最終建置無警告或錯誤
-- [ ] 7.2 執行 `hugo server -s hugo/` 並手動驗證：首頁、6 個章節頁面、附錄頁面、主選單導覽均可正常存取
-- [ ] 7.3 確認 `hugo/public/` 目錄不需提交至版本控制（應加入 `.gitignore`）
-- [ ] 7.4 更新 `README.md`，說明 Hugo 網站結構、本機開發指令（`hugo server -s hugo/`）與部署流程
-- [ ] 7.5 git commit: `docs: update README with hugo site setup and deployment instructions`
+- [x] 7.1 執行 `hugo -s hugo/ --minify` 確認最終建置無警告或錯誤
+- [x] 7.2 執行 `hugo server -s hugo/` 並手動驗證：首頁、6 個章節頁面、附錄頁面、主選單導覽均可正常存取
+- [x] 7.3 確認 `hugo/public/` 目錄不需提交至版本控制（應加入 `.gitignore`）
+- [x] 7.4 更新 `README.md`，說明 Hugo 網站結構、本機開發指令（`hugo server -s hugo/`）與部署流程
+- [x] 7.5 git commit: `docs: update README with hugo site setup and deployment instructions`
