@@ -2,4 +2,4 @@
 title: "Resources"
 ---
 
-Helpful links, references, and reading materials will live here.
+課程相關工具、指令速查與參考資源。

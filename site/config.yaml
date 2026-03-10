@@ -6,6 +6,7 @@ theme: "hugo-book"
 params:
   description: "Course materials, assignments, and resources."
   site_author: "Course Team"
+  BookSection: "lessons"
 
 menu:
   main:

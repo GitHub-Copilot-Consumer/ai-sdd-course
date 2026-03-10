@@ -1,5 +1,5 @@
 ---
-title: "Lessons"
+title: "課程章節"
 ---
 
-Lesson content will live here.
+從 AI 輔助到規格驅動開發的完整課程章節。

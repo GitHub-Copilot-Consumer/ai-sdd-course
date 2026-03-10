@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.157.0">
   <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -9,34 +8,26 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GitHub Copilot 與 OpenSpec/OpenCode 深度整合
-本課程帶你走過 AI 輔助開發的完整演進路徑——從自動補全、對話式生成，到最終的規格驅動生成 (Spec-Driven)。
-透過 GitHub Copilot、OpenSpec 與 OpenCode 的深度整合，學習如何讓 AI 按照明確規格交付可維護的程式碼。
-課程章節# 0. 課前暖身：AI 輔助開發的現況與痛點 1. GitHub Copilot Chat：從「對話」到「生產力」 2. 解決雜亂無章：引入 SDD 3. (實戰) OpenSpec 與 OPSX 工作流 4. 跨越生態系：從 Copilot 遷移至 OpenCode 5. 團隊導入策略與最佳實踐 ">
+<meta name="description" content="為何 TDD (測試驅動) 在 AI 時代不夠用？因為 AI 需要明確的「做什麼」(What) 而非僅是驗證「對不對」。">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.com/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.com/lessons/ch2-sdd/">
   <meta property="og:site_name" content="Course Site">
-  <meta property="og:title" content="從 AI 輔助到規格驅動 (SDD) 實戰攻略">
-  <meta property="og:description" content="GitHub Copilot 與 OpenSpec/OpenCode 深度整合
-本課程帶你走過 AI 輔助開發的完整演進路徑——從自動補全、對話式生成，到最終的規格驅動生成 (Spec-Driven)。
-透過 GitHub Copilot、OpenSpec 與 OpenCode 的深度整合，學習如何讓 AI 按照明確規格交付可維護的程式碼。
-課程章節# 0. 課前暖身：AI 輔助開發的現況與痛點 1. GitHub Copilot Chat：從「對話」到「生產力」 2. 解決雜亂無章：引入 SDD 3. (實戰) OpenSpec 與 OPSX 工作流 4. 跨越生態系：從 Copilot 遷移至 OpenCode 5. 團隊導入策略與最佳實踐">
+  <meta property="og:title" content="2. 解決雜亂無章：引入 SDD (Spec-Driven Development)">
+  <meta property="og:description" content="為何 TDD (測試驅動) 在 AI 時代不夠用？因為 AI 需要明確的「做什麼」(What) 而非僅是驗證「對不對」。">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="lessons">
 
 
-  <meta itemprop="name" content="從 AI 輔助到規格驅動 (SDD) 實戰攻略">
-  <meta itemprop="description" content="GitHub Copilot 與 OpenSpec/OpenCode 深度整合
-本課程帶你走過 AI 輔助開發的完整演進路徑——從自動補全、對話式生成，到最終的規格驅動生成 (Spec-Driven)。
-透過 GitHub Copilot、OpenSpec 與 OpenCode 的深度整合，學習如何讓 AI 按照明確規格交付可維護的程式碼。
-課程章節# 0. 課前暖身：AI 輔助開發的現況與痛點 1. GitHub Copilot Chat：從「對話」到「生產力」 2. 解決雜亂無章：引入 SDD 3. (實戰) OpenSpec 與 OPSX 工作流 4. 跨越生態系：從 Copilot 遷移至 OpenCode 5. 團隊導入策略與最佳實踐">
-  <meta itemprop="wordCount" content="41">
+  <meta itemprop="name" content="2. 解決雜亂無章：引入 SDD (Spec-Driven Development)">
+  <meta itemprop="description" content="為何 TDD (測試驅動) 在 AI 時代不夠用？因為 AI 需要明確的「做什麼」(What) 而非僅是驗證「對不對」。">
+  <meta itemprop="wordCount" content="51">
 
-<title>從 AI 輔助到規格驅動 (SDD) 實戰攻略 | Course Site</title>
+<title>2. 解決雜亂無章：引入 SDD (Spec-Driven Development) | Course Site</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.com/">
+<link rel="canonical" href="https://example.com/lessons/ch2-sdd/">
 <link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
 
 
@@ -44,11 +35,10 @@ https://github.com/alex-shpak/hugo-book
   <script defer src="/en.search.min.dffeb14f7d8d7a7341184255bd8b109d325e8e12ece1663ceacb200a26f3804a.js" integrity="sha256-3/6xT32NenNBGEJVvYsQnTJejhLs4WY86ssgCibzgEo=" crossorigin="anonymous"></script>
 
 
-<link rel="alternate" type="application/rss+xml" href="https://example.com/index.xml" title="Course Site" />
 
   
 </head>
-<body dir="ltr" class="book-kind-home book-type-page">
+<body dir="ltr" class="book-kind-page book-type-lessons">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
@@ -106,7 +96,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/lessons/ch2-sdd/" class="">
+    <a href="/lessons/ch2-sdd/" class="active">
       2. 解決雜亂無章：引入 SDD (Spec-Driven Development)</a>
   
 
@@ -205,7 +195,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>從 AI 輔助到規格驅動 (SDD) 實戰攻略</h3>
+  <h3>2. 解決雜亂無章：引入 SDD (Spec-Driven Development)</h3>
 
   <label for="toc-control">
     
@@ -221,7 +211,10 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#課程章節">課程章節</a></li>
+    <li><a href="#sdd-核心哲學">SDD 核心哲學</a></li>
+    <li><a href="#openspec-解決的問題">OpenSpec 解決的問題</a></li>
+    <li><a href="#與現有流程整合">與現有流程整合</a></li>
+    <li><a href="#市場比較">市場比較</a></li>
   </ul>
 </nav>
 
@@ -234,19 +227,25 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><p><strong>GitHub Copilot 與 OpenSpec/OpenCode 深度整合</strong></p>
-<p>本課程帶你走過 AI 輔助開發的完整演進路徑——從自動補全、對話式生成，到最終的<strong>規格驅動生成 (Spec-Driven)</strong>。</p>
-<p>透過 GitHub Copilot、OpenSpec 與 OpenCode 的深度整合，學習如何讓 AI 按照明確規格交付可維護的程式碼。</p>
-<hr>
-<h2 id="課程章節">課程章節<a class="anchor" href="#%e8%aa%b2%e7%a8%8b%e7%ab%a0%e7%af%80">#</a></h2>
+  <article class="markdown book-article"><blockquote class='book-hint '>
+<p>為何 TDD (測試驅動) 在 AI 時代不夠用？因為 AI 需要明確的「做什麼」(What) 而非僅是驗證「對不對」。</p>
+</blockquote><h2 id="sdd-核心哲學">SDD 核心哲學<a class="anchor" href="#sdd-%e6%a0%b8%e5%bf%83%e5%93%b2%e5%ad%b8">#</a></h2>
 <ul>
-<li><a href="/lessons/ch0-warmup/">0. 課前暖身：AI 輔助開發的現況與痛點</a></li>
-<li><a href="/lessons/ch1-copilot/">1. GitHub Copilot Chat：從「對話」到「生產力」</a></li>
-<li><a href="/lessons/ch2-sdd/">2. 解決雜亂無章：引入 SDD</a></li>
-<li><a href="/lessons/ch3-openspec/">3. (實戰) OpenSpec 與 OPSX 工作流</a></li>
-<li><a href="/lessons/ch4-opencode/">4. 跨越生態系：從 Copilot 遷移至 OpenCode</a></li>
-<li><a href="/lessons/ch5-team/">5. 團隊導入策略與最佳實踐</a></li>
+<li><strong>Fluid &amp; Iterative：</strong> 流動且迭代，非僵化的瀑布式。</li>
+<li><strong>動作取代階段：</strong> 隨時可以更新 Spec、實作或歸檔。</li>
 </ul>
+<h2 id="openspec-解決的問題">OpenSpec 解決的問題<a class="anchor" href="#openspec-%e8%a7%a3%e6%b1%ba%e7%9a%84%e5%95%8f%e9%a1%8c">#</a></h2>
+<ul>
+<li>對抗 <strong>程式碼熵 (Code Entropy)</strong>：量化專案混亂程度（如命名不一致、邏輯重複）。</li>
+<li><strong>Drift Detection：</strong> 偵測實作是否偏離原始需求。</li>
+</ul>
+<h2 id="與現有流程整合">與現有流程整合<a class="anchor" href="#%e8%88%87%e7%8f%be%e6%9c%89%e6%b5%81%e7%a8%8b%e6%95%b4%e5%90%88">#</a></h2>
+<ul>
+<li><strong>Agile：</strong> Spec 作為 Definition of Done。</li>
+<li><strong>CI/CD：</strong> 在 Pipeline 中加入 <code>openspec validate</code>。</li>
+</ul>
+<h2 id="市場比較">市場比較<a class="anchor" href="#%e5%b8%82%e5%a0%b4%e6%af%94%e8%bc%83">#</a></h2>
+<p>OpenSpec vs GitHub Spec Kit (太重) vs AWS Kiro (鎖定平台)。</p>
 </article>
  
       
@@ -271,6 +270,25 @@ https://github.com/alex-shpak/hugo-book
 
   
   
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/lessons/ch1-copilot/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>1. GitHub Copilot Chat：從「對話」到「生產力」</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/lessons/ch3-openspec/" class="flex align-center">
+        <span>3. (實戰) OpenSpec 與 OPSX 工作流</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
   
 
 
@@ -305,7 +323,10 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#課程章節">課程章節</a></li>
+    <li><a href="#sdd-核心哲學">SDD 核心哲學</a></li>
+    <li><a href="#openspec-解決的問題">OpenSpec 解決的問題</a></li>
+    <li><a href="#與現有流程整合">與現有流程整合</a></li>
+    <li><a href="#市場比較">市場比較</a></li>
   </ul>
 </nav>
 
