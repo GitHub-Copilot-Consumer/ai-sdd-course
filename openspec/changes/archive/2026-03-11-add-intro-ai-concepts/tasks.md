@@ -16,4 +16,4 @@
 - [x] 3.1 執行 `hugo server -s hugo/` 確認導言章節頁面可正常存取，且在章節列表中排在 Ch0 之前
 - [x] 3.2 確認 `hugo/content/chapters/` 目錄共有 8 個檔案（`_index.md` + 7 個章節頁面，含新增的 `ch-intro-ai.md`）
 - [x] 3.3 執行 `hugo -s hugo/ --minify` 確認建置無錯誤
-- [ ] 3.4 git commit: `feat: add intro chapter on Model, Agent, and Coding Agent concepts`
+- [x] 3.4 git commit: `feat: add intro chapter on Model, Agent, and Coding Agent concepts`
