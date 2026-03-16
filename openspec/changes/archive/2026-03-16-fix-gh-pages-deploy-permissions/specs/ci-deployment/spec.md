@@ -1,8 +1,4 @@
-## Purpose
-
-Defines requirements for CI/CD pipeline configuration, including build tooling versions and deployment workflows.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: CI pipeline uses compatible Hugo version
 The CI pipeline SHALL use Hugo `0.147.0` (extended) to build the site, ensuring compatibility with `hextra v0.12.1`. The `hugo-version` field in `.github/workflows/deploy.yml` MUST be set to `0.147.0`.
@@ -14,10 +10,3 @@ The CI pipeline SHALL use Hugo `0.147.0` (extended) to build the site, ensuring 
 #### Scenario: Hugo version is explicitly pinned
 - **WHEN** the GitHub Actions workflow runs
 - **THEN** the `hugo-version` field in `.github/workflows/deploy.yml` SHALL be set to `0.147.0`
-
-<!-- @trace
-source: fix-gh-pages-deploy-permissions
-updated: 2026-03-16
-code:
-  - .github/workflows/deploy.yml
--->

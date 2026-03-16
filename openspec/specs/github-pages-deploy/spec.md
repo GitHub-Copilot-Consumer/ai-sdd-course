@@ -10,67 +10,28 @@ TBD - created by archiving change 'hugo-course-site'. Update Purpose after archi
 系統 SHALL 建立 `.github/workflows/deploy.yml`，定義 Hugo 網站的 CI/CD 流程，其 MUST 包含以下明確設定：
 
 - **觸發條件**：`on: push: branches: [main]`（僅 push 至 `main` branch 時觸發）
+- **Job 權限**：`deploy` job MUST 宣告 `permissions: contents: write`，確保 `GITHUB_TOKEN` 有權限 push 至 `gh-pages` branch
 - **建置步驟順序**：
   1. `actions/checkout@v4`（含 `submodules: false` 與 `fetch-depth: 0`）
   2. `actions/setup-go@v5`（`go-version: '1.21'`，供 Hugo Module 使用）
-  3. `peaceiris/actions-hugo@v2`（`hugo-version: '0.120.4'`，`extended: true`）
+  3. `peaceiris/actions-hugo@v2`（`hugo-version: '0.147.0'`，`extended: true`）
   4. 執行 `hugo -s site/ --minify -b ${{ env.GITHUB_PAGES_URL }}`
   5. `peaceiris/actions-gh-pages@v3`（`publish_dir: ./site/public`，`github_token: ${{ secrets.GITHUB_TOKEN }}`）
 
 #### Scenario: 工作流程檔案存在且包含必要步驟
 - **WHEN** 讀取 `.github/workflows/deploy.yml`
-- **THEN** 檔案 MUST 存在，且 MUST 包含 `go-version: '1.21'`、`hugo-version: '0.120.4'`、`hugo -s site/ --minify`、`-b ${{ env.GITHUB_PAGES_URL }}`、`publish_dir: ./site/public` 等明確字串
+- **THEN** 檔案 MUST 存在，且 MUST 包含 `permissions: contents: write`、`go-version: '1.21'`、`hugo-version: '0.147.0'`、`hugo -s site/ --minify`、`-b ${{ env.GITHUB_PAGES_URL }}`、`publish_dir: ./site/public` 等明確字串
+
+#### Scenario: Deploy job 具備寫入權限
+- **WHEN** GitHub Actions 執行 `deploy` job
+- **THEN** `GITHUB_TOKEN` MUST 具備 `contents: write` 權限，使 `peaceiris/actions-gh-pages@v3` 能夠成功 push 至 `gh-pages` branch（不得回傳 403）
 
 
 <!-- @trace
-source: hugo-course-site
-updated: 2026-03-10
+source: fix-gh-pages-deploy-permissions
+updated: 2026-03-16
 code:
-  - site/content/_index.md
-  - site/content/resources/_index.md
-  - hugo/content/chapters/ch-intro-ai.md
-  - site/public/icons/forward.svg
-  - site/public/lessons/ch1-copilot/index.html
-  - site/public/sitemap.xml
-  - site/public/categories/index.html
-  - site/public/tags/index.xml
-  - README.md
-  - site/content/lessons/ch3-openspec.md
-  - site/public/icons/backward.svg
-  - site/config.yaml
-  - site/public/assignments/index.xml
-  - site/public/lessons/ch5-team/index.html
-  - site/public/lessons/index.xml
-  - site/public/resources/index.xml
-  - site/public/en.search.min.c266608cea2076427ca0be0db5767ba354b56d62c5e0f873d52a4fed991722c8.js
-  - site/public/lessons/ch4-opencode/index.html
-  - site/public/resources/commands/index.html
-  - site/public/en.search.min.dffeb14f7d8d7a7341184255bd8b109d325e8e12ece1663ceacb200a26f3804a.js
-  - site/content/lessons/_index.md
-  - site/public/lessons/ch2-sdd/index.html
-  - site/public/en.search-data.min.a9215e26ea6939e03a42794dbe388c9919801d47a181e9f071d0234b43c1421e.json
-  - site/public/tags/index.html
-  - site/themes/hugo-book/
-  - site/public/en.search-data.min.11d8fd6c789e124cfa714dc97b60c1da6ed1f7378df1a86aad25dbd2927b9e47.json
-  - site/public/categories/index.xml
-  - site/content/lessons/ch1-copilot.md
-  - site/content/lessons/ch2-sdd.md
-  - site/public/lessons/ch3-openspec/index.html
-  - site/content/lessons/ch4-opencode.md
-  - site/public/lessons/index.html
   - .github/workflows/deploy.yml
-  - site/content/lessons/ch0-warmup.md
-  - site/public/index.html
-  - .gitmodules
-  - site/public/404.html
-  - site/public/resources/index.html
-  - site/content/resources/commands.md
-  - site/content/lessons/ch5-team.md
-  - site/public/icons/toc.svg
-  - site/layouts/_partials/docs/menu-filetree.html
-  - site/public/index.xml
-  - site/public/lessons/ch0-warmup/index.html
-  - site/public/assignments/index.html
 -->
 
 ---
