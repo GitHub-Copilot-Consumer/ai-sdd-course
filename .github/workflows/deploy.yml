@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  GITHUB_PAGES_URL: https://github-copilot-consumer.github.io/ai-sdd-course/
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,7 +30,7 @@ jobs:
           extended: true
 
       - name: Build site
-        run: hugo -s site/ --minify
+        run: hugo -s site/ --minify -b ${{ env.GITHUB_PAGES_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
