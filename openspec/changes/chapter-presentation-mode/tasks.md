@@ -20,7 +20,7 @@
 - [x] 3.2 為 `nextSlide()` / `prevSlide()` 撰寫單元測試：驗證邊界行為（已是最後/第一張時不移動）
 - [x] 3.3 實作鍵盤事件監聽器：`ArrowRight` → `nextSlide()`，`ArrowLeft` → `prevSlide()`，`Escape` → `exitPresentation()`
 - [x] 3.4 為鍵盤事件撰寫測試：驗證 ArrowRight/ArrowLeft 觸發正確行為、退出後 ArrowRight 不再切換投影片
-- [ ] 3.5 git commit: `feat: add keyboard navigation for presentation mode`
+- [x] 3.5 git commit: `feat: add keyboard navigation for presentation mode`
 
 ## 4. 進入與退出全螢幕
 
