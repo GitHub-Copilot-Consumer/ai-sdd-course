@@ -59,9 +59,27 @@ hugo -s site/ --minify
 
 推送至 `main` branch 後，GitHub Actions 會自動建置並部署至 GitHub Pages（`gh-pages` branch）。
 
-設定流程：
-1. Push to `main`
-2. 至 GitHub Repo Settings > Pages，將 Source 設為 `gh-pages` branch
+**首次設定步驟：**
+
+1. 確認 `.github/workflows/deploy.yml` 中的 `GITHUB_PAGES_URL` 已更新為正確網址：
+   ```yaml
+   env:
+     GITHUB_PAGES_URL: https://<owner>.github.io/<repo>/
+   ```
+   本專案為：`https://github-copilot-consumer.github.io/ai-sdd-course/`
+
+2. Push 至 `main` branch，觸發 GitHub Actions 工作流程
+
+3. 至 GitHub Repository Settings > Pages，設定：
+   - **Source**：`Deploy from branch`
+   - **Branch**：`gh-pages`（root）
+
+4. 稍待片刻後，站點將發佈於 `https://github-copilot-consumer.github.io/ai-sdd-course/`
+
+**注意：**
+- 若更改 Repository 名稱，需同步更新 `deploy.yml` 中的 `GITHUB_PAGES_URL`
+- 私有 Repository 需要 GitHub 付費方案才能使用 GitHub Pages
+- 本機開發使用 `hugo server -s site/`，不受 `GITHUB_PAGES_URL` 影響
 
 ---
 
