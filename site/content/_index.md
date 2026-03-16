@@ -11,7 +11,7 @@ title: "從 AI 輔助到規格驅動 (SDD) 實戰攻略"
 ---
 
 ## 課程章節
-
+- [導言：理解 Model、Agent 與 Coding Agent](/lessons/ch-intro-ai/)
 - [0. 課前暖身：AI 輔助開發的現況與痛點](/lessons/ch0-warmup/)
 - [1. GitHub Copilot Chat：從「對話」到「生產力」](/lessons/ch1-copilot/)
 - [2. 解決雜亂無章：引入 SDD](/lessons/ch2-sdd/)

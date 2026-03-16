@@ -1,6 +1,6 @@
 baseURL: "https://example.com/"
-languageCode: "en-us"
-title: "Course Site"
+languageCode: "zh-TW"
+title: "從 AI 輔助到規格驅動"
 
 params:
   description: "Course materials, assignments, and resources."

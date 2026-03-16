@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 (function () {
   const searchDataURL = '/en.search-data.json';
-  const resultsFoundTemplate = '%d results found';
+  const resultsFoundTemplate = '找到 %d 個結果';
 
   const inputElements = document.querySelectorAll('.hextra-search-input');
   for (const el of inputElements) {
@@ -387,12 +387,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!resultsElement) return;
 
     if (!results.length) {
-      resultsElement.innerHTML = `<span class="hextra-search-no-result">No results found.</span>`;
+      resultsElement.innerHTML = `<span class="hextra-search-no-result">無結果</span>`;
       // Announce no results to screen readers
       const wrapper = resultsElement.closest('.hextra-search-wrapper');
       const statusEl = wrapper ? wrapper.querySelector('.hextra-search-status') : null;
       if (statusEl) {
-        statusEl.textContent = 'No results found.';
+        statusEl.textContent = '無結果';
       }
       return;
     }
@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (statusEl) {
       statusEl.textContent = results.length > 0
         ? resultsFoundTemplate.replace('%d', results.length.toString())
-        : 'No results found.';
+        : '無結果';
     }
   }
 })();
