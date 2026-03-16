@@ -1,0 +1,116 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>從 AI 輔助到規格驅動 – Resources</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/</link><description>Recent content in Resources on 從 AI 輔助到規格驅動</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><atom:link href="https://github-copilot-consumer.github.io/ai-sdd-course/resources/index.xml" rel="self" type="application/rss+xml"/><item><title>常用 OPSX 指令速查</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github-copilot-consumer.github.io/ai-sdd-course/resources/commands/</guid><description>
+&lt;h2>OPSX 核心指令&lt;span class="hx:absolute hx:-mt-20" id="opsx-核心指令">&lt;/span>
+&lt;a href="#opsx-%e6%a0%b8%e5%bf%83%e6%8c%87%e4%bb%a4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>指令&lt;/th>
+&lt;th>用途&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>/opsx:explore&lt;/code>&lt;/td>
+&lt;td>探索需求、調查瓶頸、釐清模糊問題&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>/opsx:new &amp;lt;name&amp;gt;&lt;/code>&lt;/td>
+&lt;td>建立新的變更工作區 (Change Workspace)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>/opsx:ff&lt;/code>&lt;/td>
+&lt;td>Fast-Forward，一次生成所有規格文件 (Proposal → Tasks)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>/opsx:apply&lt;/code>&lt;/td>
+&lt;td>AI 讀取 &lt;code>tasks.md&lt;/code> 並自動撰寫程式碼&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>/opsx:verify&lt;/code>&lt;/td>
+&lt;td>檢查程式碼是否符合 Spec，偵測偏移 (Drift)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>/opsx:archive&lt;/code>&lt;/td>
+&lt;td>完成開發，將變更合併回主規格文件&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2>指令詳細說明&lt;span class="hx:absolute hx:-mt-20" id="指令詳細說明">&lt;/span>
+&lt;a href="#%e6%8c%87%e4%bb%a4%e8%a9%b3%e7%b4%b0%e8%aa%aa%e6%98%8e" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>&lt;code>/opsx:explore&lt;/code>&lt;span class="hx:absolute hx:-mt-20" id="opsxexplore">&lt;/span>
+&lt;a href="#opsxexplore" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>階段：&lt;/strong> 探索&lt;/p>
+&lt;p>在寫 Code 前先調查瓶頸、釐清模糊需求。&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>範例：「網站變慢了，先 explore 再決定要改什麼」&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h3>&lt;code>/opsx:new &amp;lt;name&amp;gt;&lt;/code>&lt;span class="hx:absolute hx:-mt-20" id="opsxnew-name">&lt;/span>
+&lt;a href="#opsxnew-name" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>階段：&lt;/strong> 啟動&lt;/p>
+&lt;p>建立新的變更資料夾（Change Workspace）。&lt;code>&amp;lt;name&amp;gt;&lt;/code> 使用 kebab-case。&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>/opsx:new add-user-auth
+/opsx:new fix-payment-bug&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h3>&lt;code>/opsx:ff&lt;/code>&lt;span class="hx:absolute hx:-mt-20" id="opsxff">&lt;/span>
+&lt;a href="#opsxff" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>階段：&lt;/strong> 規劃&lt;/p>
+&lt;p>Fast-Forward 快速生成。一次從 Proposal 推進到 Tasks，適合需求清晰的情境。&lt;/p>
+&lt;hr>
+&lt;h3>&lt;code>/opsx:apply&lt;/code>&lt;span class="hx:absolute hx:-mt-20" id="opsxapply">&lt;/span>
+&lt;a href="#opsxapply" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>階段：&lt;/strong> 實作&lt;/p>
+&lt;p>AI 讀取 &lt;code>tasks.md&lt;/code> 並逐一完成實作任務，同步標記完成進度。&lt;/p>
+&lt;hr>
+&lt;h3>&lt;code>/opsx:verify&lt;/code>&lt;span class="hx:absolute hx:-mt-20" id="opsxverify">&lt;/span>
+&lt;a href="#opsxverify" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>階段：&lt;/strong> 驗證&lt;/p>
+&lt;p>關鍵步驟。對比程式碼實作與 Spec 要求，輸出 Drift Report，確保交付符合規格。&lt;/p>
+&lt;hr>
+&lt;h3>&lt;code>/opsx:archive&lt;/code>&lt;span class="hx:absolute hx:-mt-20" id="opsxarchive">&lt;/span>
+&lt;a href="#opsxarchive" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>階段：&lt;/strong> 歸檔&lt;/p>
+&lt;p>完成開發後，將變更的 Spec 合併回 &lt;code>openspec/specs/&lt;/code> 主目錄，並清理 Change Workspace。&lt;/p>
+&lt;hr>
+&lt;h2>OpenSpec CLI 基本指令&lt;span class="hx:absolute hx:-mt-20" id="openspec-cli-基本指令">&lt;/span>
+&lt;a href="#openspec-cli-%e5%9f%ba%e6%9c%ac%e6%8c%87%e4%bb%a4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 安裝&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm install -g @fission-ai/openspec
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 初始化專案&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>openspec init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 查看變更狀態&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>openspec status --change &amp;lt;name&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 列出所有變更&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>openspec list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 取得 Artifact 建立指引&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>openspec instructions &amp;lt;artifact-id&amp;gt; --change &amp;lt;name&amp;gt;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
