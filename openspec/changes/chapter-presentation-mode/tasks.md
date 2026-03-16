@@ -46,5 +46,5 @@
 
 ## 7. 文件更新
 
-- [ ] 7.1 更新 `README.md`，在功能說明區塊加入「簡報模式」說明（一段，含使用方式）
-- [ ] 7.2 git commit: `docs: update README with presentation mode feature`
+- [x] 7.1 更新 `README.md`，在功能說明區塊加入「簡報模式」說明（一段，含使用方式）
+- [x] 7.2 git commit: `docs: update README with presentation mode feature`
