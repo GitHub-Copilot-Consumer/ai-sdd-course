@@ -16,19 +16,22 @@ TBD - created by archiving change 'hugo-course-site'. Update Purpose after archi
   2. `actions/setup-go@v5`（`go-version: '1.21'`，供 Hugo Module 使用）
   3. `peaceiris/actions-hugo@v2`（`hugo-version: '0.147.0'`，`extended: true`）
   4. 執行 `hugo -s site/ --minify -b ${{ env.GITHUB_PAGES_URL }}`
-  5. `peaceiris/actions-gh-pages@v3`（`publish_dir: ./site/public`，`github_token: ${{ secrets.GITHUB_TOKEN }}`）
+  5. `peaceiris/actions-gh-pages@v3`（`publish_dir: ./site/public`，`github_token: ${{ secrets.GITHUB_TOKEN }}`，`enable_jekyll: false`）
 
 #### Scenario: 工作流程檔案存在且包含必要步驟
 - **WHEN** 讀取 `.github/workflows/deploy.yml`
-- **THEN** 檔案 MUST 存在，且 MUST 包含 `permissions: contents: write`、`go-version: '1.21'`、`hugo-version: '0.147.0'`、`hugo -s site/ --minify`、`-b ${{ env.GITHUB_PAGES_URL }}`、`publish_dir: ./site/public` 等明確字串
+- **THEN** 檔案 MUST 存在，且 MUST 包含 `permissions: contents: write`、`go-version: '1.21'`、`hugo-version: '0.147.0'`、`hugo -s site/ --minify`、`-b ${{ env.GITHUB_PAGES_URL }}`、`publish_dir: ./site/public`、`enable_jekyll: false` 等明確字串
 
 #### Scenario: Deploy job 具備寫入權限
 - **WHEN** GitHub Actions 執行 `deploy` job
 - **THEN** `GITHUB_TOKEN` MUST 具備 `contents: write` 權限，使 `peaceiris/actions-gh-pages@v3` 能夠成功 push 至 `gh-pages` branch（不得回傳 403）
 
+#### Scenario: 部署步驟停用 Jekyll 處理
+- **WHEN** 讀取 `.github/workflows/deploy.yml` 的部署步驟
+- **THEN** `peaceiris/actions-gh-pages@v3` 步驟 MUST 包含 `enable_jekyll: false` 參數
 
 <!-- @trace
-source: fix-gh-pages-deploy-permissions
+source: fix-github-pages-404
 updated: 2026-03-16
 code:
   - .github/workflows/deploy.yml

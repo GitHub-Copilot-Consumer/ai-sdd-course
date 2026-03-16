@@ -59,6 +59,8 @@ hugo -s site/ --minify
 
 推送至 `main` branch 後，GitHub Actions 會自動建置並部署至 GitHub Pages（`gh-pages` branch）。
 
+**線上網站：** https://github-copilot-consumer.github.io/ai-sdd-course/
+
 **首次設定步驟：**
 
 1. 確認 `.github/workflows/deploy.yml` 中的 `GITHUB_PAGES_URL` 已更新為正確網址：
@@ -77,6 +79,7 @@ hugo -s site/ --minify
 4. 稍待片刻後，站點將發佈於 `https://github-copilot-consumer.github.io/ai-sdd-course/`
 
 **注意：**
+- Workflow 使用 `enable_jekyll: false`，確保 `gh-pages` branch 包含 `.nojekyll`，讓 GitHub Pages 直接提供 Hugo 靜態資源而不經 Jekyll 處理
 - 若更改 Repository 名稱，需同步更新 `deploy.yml` 中的 `GITHUB_PAGES_URL`
 - 私有 Repository 需要 GitHub 付費方案才能使用 GitHub Pages
 - 本機開發使用 `hugo server -s site/`，不受 `GITHUB_PAGES_URL` 影響
