@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://example.com/lessons/ch-intro-ai/</loc></url><url><loc>https://example.com/lessons/ch1-copilot/</loc></url><url><loc>https://example.com/resources/commands/</loc></url><url><loc>https://example.com/lessons/ch2-sdd/</loc></url><url><loc>https://example.com/lessons/ch3-openspec/</loc></url><url><loc>https://example.com/lessons/ch4-opencode/</loc></url><url><loc>https://example.com/lessons/ch5-team/</loc></url><url><loc>https://example.com/lessons/ch0-warmup/</loc></url><url><loc>https://example.com/assignments/</loc></url><url><loc>https://example.com/categories/</loc></url><url><loc>https://example.com/resources/</loc></url><url><loc>https://example.com/tags/</loc></url><url><loc>https://example.com/</loc></url><url><loc>https://example.com/lessons/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/lessons/ch-intro-ai/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/ch1-copilot/</loc>
+  </url><url>
+    <loc>http://localhost:1313/resources/commands/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/ch2-sdd/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/ch3-openspec/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/ch4-opencode/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/ch5-team/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/ch0-warmup/</loc>
+  </url><url>
+    <loc>http://localhost:1313/assignments/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/resources/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/lessons/</loc>
+  </url>
+</urlset>

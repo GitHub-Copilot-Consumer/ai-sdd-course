@@ -1,12 +1,10 @@
 baseURL: "https://example.com/"
 languageCode: "en-us"
 title: "Course Site"
-theme: "hugo-book"
 
 params:
   description: "Course materials, assignments, and resources."
   site_author: "Course Team"
-  BookSection: "lessons"
 
 menu:
   main:
@@ -19,3 +17,7 @@ menu:
     - name: "Resources"
       url: "/resources/"
       weight: 30
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
