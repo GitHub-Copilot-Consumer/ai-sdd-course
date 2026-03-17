@@ -1,6 +1,6 @@
-# 從 AI 輔助到規格驅動 (SDD) 實戰攻略
+# 從 Vibe Coding 到規格驅動開發 (SDD) 實戰攻略
 
-**GitHub Copilot 與 OpenSpec/OpenCode 深度整合**
+**從 Greenfield MVP 到 Brownfield 可維護產品的完整旅程**
 
 ---
 
@@ -13,23 +13,39 @@
 ```
 site/
 ├── content/
-│   ├── _index.md              # 首頁
+│   ├── _index.md                  # 首頁
 │   ├── lessons/
-│   │   ├── _index.md          # 課程章節列表頁
-│   │   ├── ch-intro-ai.md     # 導言：理解 Model、Agent 與 Coding Agent（含主流 CLI 比較）
-│   │   ├── ch0-warmup.md      # 第 0 章
-│   │   ├── ch1-copilot.md     # 第 1 章
-│   │   ├── ch2-sdd.md         # 第 2 章
-│   │   ├── ch3-openspec.md    # 第 3 章
-│   │   ├── ch4-opencode.md    # 第 4 章
-│   │   └── ch5-team.md        # 第 5 章
-│   ├── assignments/           # 作業
+│   │   ├── _index.md              # 課程章節列表頁
+│   │   ├── ch-intro-ai.md         # 導言：理解 Model、Agent 與 Coding Agent（Greenfield → Brownfield 弧線）
+│   │   ├── ch0-warmup.md          # Ch0：AI 開發三階段演進、Vibe Coding 的價值與限制、課程路線圖
+│   │   ├── ch1-vibe-coding.md     # Ch1：Vibe Coding 方法論、Prototype 退出條件、Copilot 操作
+│   │   ├── ch2-mvp-to-spec.md     # Ch2：MVP 後的三條路、Proposal = MVP 結晶、TDD vs SDD
+│   │   ├── ch3-openspec.md        # Ch3：Technical Spec 與 OpenSpec 工作流、OPSX 指令詳解
+│   │   ├── ch4-coding-agent.md    # Ch4：Coding Agent 結構化開發、Plan Mode、Brownfield 注意事項
+│   │   ├── ch5-verify-observe.md  # Ch5：Spec 驗證、AI 輔助測試、Observability、Archive
+│   │   ├── ch6-team.md            # Ch6：團隊導入策略、人機協作邊界、完整生命週期回顧
+│   │   └── appendix-setup.md      # 附錄：OpenSpec CLI、OpenCode、Ollama 安裝步驟
+│   ├── assignments/               # 作業
 │   └── resources/
-│       ├── commands.md        # 常用 OPSX 指令速查
-│       └── everything-claude-code.md  # everything-claude-code 資源介紹與 OpenCode 整合指南
-├── themes/                    # (不使用 submodule，主題由 Hugo Module 管理)
-└── config.yaml                # Hugo 設定檔
+│       ├── commands.md            # 常用 OPSX 指令速查
+│       └── everything-claude-code.md  # everything-claude-code 資源介紹
+├── themes/                        # (不使用 submodule，主題由 Hugo Module 管理)
+└── config.yaml                    # Hugo 設定檔
 ```
+
+### 課程結構
+
+| 章節 | 主題 | 階段 |
+|------|------|------|
+| 導言 | Model、Agent、Coding Agent 原理 | 基礎 |
+| Ch0 | AI 開發三階段、Vibe Coding 的價值、課程路線圖 | Greenfield |
+| Ch1 | Vibe Coding 方法論、Prototype 退出條件 | Greenfield |
+| Ch2 | MVP → Proposal → Brownfield 轉折點 | 轉折點 |
+| Ch3 | Technical Spec、OpenSpec 工作流 | Brownfield |
+| Ch4 | Coding Agent 結構化開發、Plan Mode | Brownfield |
+| Ch5 | Verify、AI 測試、Observability、Archive | Brownfield |
+| Ch6 | 團隊導入策略 | 規模化 |
+| 附錄 | 工具安裝（OpenSpec CLI、OpenCode、Ollama） | 參考 |
 
 ### 本機開發
 
