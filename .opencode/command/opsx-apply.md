@@ -1,5 +1,7 @@
 ---
 description: Implement tasks from an OpenSpec change (Experimental)
+agent: openspec-apply-engineer
+model: github-copilot/claude-sonnet-4.6
 ---
 
 Implement tasks from an OpenSpec change.

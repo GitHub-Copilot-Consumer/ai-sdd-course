@@ -1,5 +1,7 @@
 ---
 description: Propose a new change - create it and generate all artifacts in one step
+agent: build
+model: github-copilot/claude-sonnet-4.6
 ---
 
 Propose a new change - create the change and generate all artifacts in one step.

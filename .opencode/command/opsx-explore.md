@@ -1,5 +1,7 @@
 ---
 description: Enter explore mode - think through ideas, investigate problems, clarify requirements
+agent: plan
+model: github-copilot/claude-opus-4.6
 ---
 
 Enter explore mode. Think deeply. Visualize freely. Follow the conversation wherever it goes.
