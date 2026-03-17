@@ -19,14 +19,16 @@
     "headers" (dict "Content-Type" "text/plain")
 -}}
 
-{{- with try (resources.GetRemote $krokiURL $opts) -}}
-  {{- with .Err -}}
-    {{- warnf "plantuml render hook: Kroki API error – %s" . -}}
-    <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
-  {{- else with .Value -}}
-    {{- .Content | safeHTML -}}
-  {{- else -}}
-    {{- warnf "plantuml render hook: Kroki returned no content for diagram at %s" $krokiURL -}}
-    <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
+<div class="plantuml-diagram" style="overflow-x:auto;">
+  {{- with try (resources.GetRemote $krokiURL $opts) -}}
+    {{- with .Err -}}
+      {{- warnf "plantuml render hook: Kroki API error – %s" . -}}
+      <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
+    {{- else with .Value -}}
+      {{- .Content | safeHTML -}}
+    {{- else -}}
+      {{- warnf "plantuml render hook: Kroki returned no content for diagram at %s" $krokiURL -}}
+      <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
+    {{- end -}}
   {{- end -}}
-{{- end -}}
+</div>

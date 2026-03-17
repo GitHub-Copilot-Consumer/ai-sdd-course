@@ -67,6 +67,12 @@ describe('plantuml-rendering: render-codeblock-plantuml.html render hook', () =>
     expect(content).toMatch(/<code[\s>]/);
   });
 
+  test('render hook wraps output in a scroll container', () => {
+    const content = fs.readFileSync(RENDER_HOOK_PATH, 'utf-8');
+    expect(content).toContain('class="plantuml-diagram"');
+    expect(content).toContain('overflow-x:auto');
+  });
+
   test('render hook uses warnf for error logging', () => {
     const content = fs.readFileSync(RENDER_HOOK_PATH, 'utf-8');
     expect(content).toContain('warnf');
@@ -94,6 +100,12 @@ describe('plantuml-rendering: plantuml shortcode', () => {
   test('shortcode outputs SVG with safeHTML', () => {
     const content = fs.readFileSync(SHORTCODE_PATH, 'utf-8');
     expect(content).toContain('safeHTML');
+  });
+
+  test('shortcode wraps output in a scroll container', () => {
+    const content = fs.readFileSync(SHORTCODE_PATH, 'utf-8');
+    expect(content).toContain('class="plantuml-diagram"');
+    expect(content).toContain('overflow-x:auto');
   });
 });
 
