@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>從 AI 輔助到規格驅動 – Resources</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/</link><description>Recent content in Resources on 從 AI 輔助到規格驅動</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><atom:link href="https://github-copilot-consumer.github.io/ai-sdd-course/resources/index.xml" rel="self" type="application/rss+xml"/><item><title>常用 OPSX 指令速查</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github-copilot-consumer.github.io/ai-sdd-course/resources/commands/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>從 AI 輔助到規格驅動 (SDD) 實戰攻略 – Resources</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/</link><description>Recent content in Resources on 從 AI 輔助到規格驅動 (SDD) 實戰攻略</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><atom:link href="https://github-copilot-consumer.github.io/ai-sdd-course/resources/index.xml" rel="self" type="application/rss+xml"/><item><title>常用 OPSX 指令速查</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github-copilot-consumer.github.io/ai-sdd-course/resources/commands/</guid><description>
 &lt;h2>OPSX 核心指令&lt;span class="hx:absolute hx:-mt-20" id="opsx-核心指令">&lt;/span>
 &lt;a href="#opsx-%e6%a0%b8%e5%bf%83%e6%8c%87%e4%bb%a4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;table>
 &lt;thead>
@@ -113,4 +113,1172 @@ data-copied-label="Copied!"
 &lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
 &lt;/button>
 &lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;/div></description></item><item><title>everything-claude-code 資源介紹</title><link>https://github-copilot-consumer.github.io/ai-sdd-course/resources/everything-claude-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github-copilot-consumer.github.io/ai-sdd-course/resources/everything-claude-code/</guid><description>
+&lt;h2>專案簡介&lt;span class="hx:absolute hx:-mt-20" id="專案簡介">&lt;/span>
+&lt;a href="#%e5%b0%88%e6%a1%88%e7%b0%a1%e4%bb%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;strong>everything-claude-code&lt;/strong>（簡稱 ECC）是一個由 &lt;a href="https://x.com/affaanmustafa"target="_blank" rel="noopener">Affaan Mustafa&lt;/a> 開發的開源 &lt;strong>agent harness 強化系統&lt;/strong>，為 Anthropic Hackathon（Cerebral Valley x Anthropic，2026 年 2 月）的得獎作品，目前已累積超過 80,000 GitHub Stars、10,000+ forks。&lt;/p>
+&lt;p>此專案並非單純的設定檔集合，而是一套完整的&lt;strong>效能優化框架&lt;/strong>：結合 Skills（工作流程模組）、Instincts（學習型行為記憶）、Memory Optimization（記憶持久化）、Security Scanning（安全掃描），以及 Research-First Development（研究優先開發哲學）。&lt;/p>
+&lt;p>&lt;strong>GitHub：&lt;/strong> &lt;a href="https://github.com/affaan-m/everything-claude-code"target="_blank" rel="noopener">https://github.com/affaan-m/everything-claude-code&lt;/a>&lt;/p>
+&lt;h3>支援的工具&lt;span class="hx:absolute hx:-mt-20" id="支援的工具">&lt;/span>
+&lt;a href="#%e6%94%af%e6%8f%b4%e7%9a%84%e5%b7%a5%e5%85%b7" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>工具&lt;/th>
+&lt;th>支援狀態&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Claude Code&lt;/td>
+&lt;td>✅ 完整支援（主要平台）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>OpenCode&lt;/td>
+&lt;td>✅ 完整支援（v1.3.0 起，12 agents、24 commands、16 skills）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cursor&lt;/td>
+&lt;td>✅ 支援&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Codex CLI / App&lt;/td>
+&lt;td>✅ 支援（v1.6.0 起）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2>核心元件概覽&lt;span class="hx:absolute hx:-mt-20" id="核心元件概覽">&lt;/span>
+&lt;a href="#%e6%a0%b8%e5%bf%83%e5%85%83%e4%bb%b6%e6%a6%82%e8%a6%bd" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>ECC 由五個互相協作的核心元件組成：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>元件&lt;/th>
+&lt;th>說明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Skills&lt;/strong>&lt;/td>
+&lt;td>可重複使用的工作流程模組，封裝特定領域知識，如 TDD、Debug、Code Review&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Hooks&lt;/strong>&lt;/td>
+&lt;td>事件驅動的自動化觸發器，在 agent 生命週期特定節點自動執行&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Commands&lt;/strong>&lt;/td>
+&lt;td>自訂斜線指令（slash commands），觸發 Skills 或複雜操作&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Rules&lt;/strong>&lt;/td>
+&lt;td>行為規範，確保 AI 在指定限制內運作（強制遵循）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Instincts&lt;/strong>&lt;/td>
+&lt;td>從過去 session 自動學習抽取的行為記憶，帶信心評分&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2>第一章：Agents（專業子代理人）&lt;span class="hx:absolute hx:-mt-20" id="第一章agents專業子代理人">&lt;/span>
+&lt;a href="#%e7%ac%ac%e4%b8%80%e7%ab%a0agents%e5%b0%88%e6%a5%ad%e5%ad%90%e4%bb%a3%e7%90%86%e4%ba%ba" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>什麼是 Agent？&lt;span class="hx:absolute hx:-mt-20" id="什麼是-agent">&lt;/span>
+&lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-agent" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>在 ECC 的架構中，Agent 是一種&lt;strong>具有特定角色與限制範圍的子代理人（subagent）&lt;/strong>，由主 Claude 實例（Orchestrator）按需委派任務。每個 Agent 都有：&lt;/p>
+&lt;ul>
+&lt;li>明確的專業角色定義（職責邊界）&lt;/li>
+&lt;li>允許使用的工具清單（工具權限範圍）&lt;/li>
+&lt;li>特定的決策判斷標準&lt;/li>
+&lt;/ul>
+&lt;p>這種設計讓每個 Agent 保持「單一職責」，避免 context 被無關資訊污染，同時讓主 agent 能夠並行處理多個任務。&lt;/p>
+&lt;h3>ECC 內建的 Agents&lt;span class="hx:absolute hx:-mt-20" id="ecc-內建的-agents">&lt;/span>
+&lt;a href="#ecc-%e5%85%a7%e5%bb%ba%e7%9a%84-agents" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>ECC 提供超過 21 個預定義 Agent，以下是主要類別：&lt;/p>
+&lt;h4>開發流程 Agents&lt;span class="hx:absolute hx:-mt-20" id="開發流程-agents">&lt;/span>
+&lt;a href="#%e9%96%8b%e7%99%bc%e6%b5%81%e7%a8%8b-agents" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Agent 檔案&lt;/th>
+&lt;th>職責&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>planner.md&lt;/code>&lt;/td>
+&lt;td>功能實作計畫分解，將需求轉為可執行 tasks&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>architect.md&lt;/code>&lt;/td>
+&lt;td>系統設計決策，評估架構方案的取捨&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tdd-guide.md&lt;/code>&lt;/td>
+&lt;td>測試驅動開發引導，確保先寫測試再實作&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>refactor-cleaner.md&lt;/code>&lt;/td>
+&lt;td>清除 dead code、整理無用的 .md 說明檔&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>doc-updater.md&lt;/code>&lt;/td>
+&lt;td>偵測程式碼變更並同步更新技術文件&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4>品質保證 Agents&lt;span class="hx:absolute hx:-mt-20" id="品質保證-agents">&lt;/span>
+&lt;a href="#%e5%93%81%e8%b3%aa%e4%bf%9d%e8%ad%89-agents" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Agent 檔案&lt;/th>
+&lt;th>職責&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>code-reviewer.md&lt;/code>&lt;/td>
+&lt;td>程式碼品質與安全性稽核&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>security-reviewer.md&lt;/code>&lt;/td>
+&lt;td>漏洞分析與安全風險評估&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>build-error-resolver.md&lt;/code>&lt;/td>
+&lt;td>建置錯誤診斷與修復&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>e2e-runner.md&lt;/code>&lt;/td>
+&lt;td>Playwright E2E 測試執行與報告&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4>語言專屬 Agents&lt;span class="hx:absolute hx:-mt-20" id="語言專屬-agents">&lt;/span>
+&lt;a href="#%e8%aa%9e%e8%a8%80%e5%b0%88%e5%b1%ac-agents" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Agent 檔案&lt;/th>
+&lt;th>職責&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>go-reviewer.md&lt;/code>&lt;/td>
+&lt;td>Go 程式碼審查（Go idioms、concurrency 模式）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>go-build-resolver.md&lt;/code>&lt;/td>
+&lt;td>Go 建置錯誤解決&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>python-reviewer.md&lt;/code>&lt;/td>
+&lt;td>Python 程式碼審查&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database-reviewer.md&lt;/code>&lt;/td>
+&lt;td>資料庫設計與 Supabase 整合審查&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3>如何設定 Agent&lt;span class="hx:absolute hx:-mt-20" id="如何設定-agent">&lt;/span>
+&lt;a href="#%e5%a6%82%e4%bd%95%e8%a8%ad%e5%ae%9a-agent" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>以 &lt;code>planner.md&lt;/code> 為例，Agent 定義的典型結構：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span># Planner Agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>你是一個功能實作規劃師。你的工作是：
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> 接收用戶功能需求
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> 拆解為可執行的子任務清單
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> 評估每個任務的依賴關係
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">4.&lt;/span> 產出帶有優先順序的任務計畫
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 允許的工具
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">-&lt;/span> Read（讀取現有程式碼）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> Glob（搜尋相關檔案）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> 禁止直接修改程式碼（寫入操作由其他 agent 執行）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 輸出格式
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>以 Markdown checklist 格式輸出，每個任務包含預估複雜度。&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Agent 透過 &lt;code>~/.claude/agents/&lt;/code>（Claude Code）或 &lt;code>.opencode/agents/&lt;/code>（OpenCode）路徑部署。&lt;/p>
+&lt;h3>OpenCode 的 Agent 機制&lt;span class="hx:absolute hx:-mt-20" id="opencode-的-agent-機制">&lt;/span>
+&lt;a href="#opencode-%e7%9a%84-agent-%e6%a9%9f%e5%88%b6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>OpenCode 原生支援兩種類型的 Agent，與 ECC 的設計哲學高度契合：&lt;/p>
+&lt;p>&lt;strong>主代理（Primary Agent）&lt;/strong>：直接與使用者互動，可透過 &lt;code>Tab&lt;/code> 鍵切換。OpenCode 內建 &lt;code>build&lt;/code>（完整工具存取）與 &lt;code>plan&lt;/code>（受限，不可直接修改檔案）兩種。&lt;/p>
+&lt;p>&lt;strong>子代理（Subagent）&lt;/strong>：由主代理透過 Task 工具委派任務，或由使用者在訊息中用 &lt;code>@&lt;/code> 提及呼叫。OpenCode 內建 &lt;code>general&lt;/code> 與 &lt;code>explore&lt;/code>（唯讀）兩種。&lt;/p>
+&lt;h4>用 Markdown 定義自訂 Agent&lt;span class="hx:absolute hx:-mt-20" id="用-markdown-定義自訂-agent">&lt;/span>
+&lt;a href="#%e7%94%a8-markdown-%e5%ae%9a%e7%be%a9%e8%87%aa%e8%a8%82-agent" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>OpenCode 支援直接用 &lt;code>.md&lt;/code> 檔案定義 Agent，存放於：&lt;/p>
+&lt;ul>
+&lt;li>全域：&lt;code>~/.config/opencode/agents/&amp;lt;name&amp;gt;.md&lt;/code>&lt;/li>
+&lt;li>專案：&lt;code>.opencode/agents/&amp;lt;name&amp;gt;.md&lt;/code>&lt;/li>
+&lt;li>相容 Claude Code：&lt;code>~/.claude/agents/&amp;lt;name&amp;gt;.md&lt;/code> 或 &lt;code>.claude/agents/&amp;lt;name&amp;gt;.md&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>重要：OpenCode 會自動讀取 Claude Code 的 &lt;code>~/.claude/agents/&lt;/code> 目錄&lt;/strong>，因此 ECC 安裝到 Claude Code 的 Agents 可以直接在 OpenCode 中使用，無需重複設定。&lt;/p>
+&lt;/blockquote>
+&lt;p>以 &lt;code>security-reviewer.md&lt;/code> 為例：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>description: Performs security audits and identifies vulnerabilities
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mode: subagent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tools:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> write: false
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> edit: false
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>You are a security expert. Focus on identifying potential security issues.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Look for:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> Input validation vulnerabilities
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> Authentication and authorization flaws
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> Data exposure risks
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- Dependency vulnerabilities&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>檔案名稱即為 Agent 名稱（&lt;code>security-reviewer&lt;/code>），可用 &lt;code>@security-reviewer&lt;/code> 直接呼叫。&lt;/p>
+&lt;h4>用 JSON 設定 Agent 行為&lt;span class="hx:absolute hx:-mt-20" id="用-json-設定-agent-行為">&lt;/span>
+&lt;a href="#%e7%94%a8-json-%e8%a8%ad%e5%ae%9a-agent-%e8%a1%8c%e7%82%ba" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>也可在 &lt;code>opencode.json&lt;/code> 中設定或覆寫 Agent 選項：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;$schema&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;https://opencode.ai/config.json&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;agent&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;plan&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;model&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;anthropic/claude-haiku-4-20250514&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;security-reviewer&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;description&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Reviews code for security vulnerabilities&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;mode&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;subagent&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;model&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;anthropic/claude-opus-4-20250514&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;tools&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;write&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;edit&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;bash&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h4>Agent 的工具權限控制&lt;span class="hx:absolute hx:-mt-20" id="agent-的工具權限控制">&lt;/span>
+&lt;a href="#agent-%e7%9a%84%e5%b7%a5%e5%85%b7%e6%ac%8a%e9%99%90%e6%8e%a7%e5%88%b6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>OpenCode 提供細粒度的權限管理，可精確控制每個 Agent 能執行的操作：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;agent&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;build&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;permission&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;bash&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;*&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ask&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;git status&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;allow&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;git diff&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;allow&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>這種設計對應到 ECC 的「最小權限」哲學——每個 Agent 只獲得完成任務所需的最低存取權。&lt;/p>
+&lt;hr>
+&lt;h2>第二章：Skills（工作流程模組）&lt;span class="hx:absolute hx:-mt-20" id="第二章skills工作流程模組">&lt;/span>
+&lt;a href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0skills%e5%b7%a5%e4%bd%9c%e6%b5%81%e7%a8%8b%e6%a8%a1%e7%b5%84" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Skills 的本質&lt;span class="hx:absolute hx:-mt-20" id="skills-的本質">&lt;/span>
+&lt;a href="#skills-%e7%9a%84%e6%9c%ac%e8%b3%aa" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Skills 是 ECC 中最重要的元件之一。它們是&lt;strong>儲存為 Markdown 文件的工作流程定義&lt;/strong>，當 AI 接到特定類型任務時，自動載入對應 Skill 以獲得精確的執行指引。&lt;/p>
+&lt;p>本質上，Skills 是&lt;strong>領域知識的結構化封裝&lt;/strong>：將原本需要在對話中重複描述的「怎麼做」抽取出來，變成可重複使用、可版本控管的工作流程。&lt;/p>
+&lt;h3>Skills 的目錄結構&lt;span class="hx:absolute hx:-mt-20" id="skills-的目錄結構">&lt;/span>
+&lt;a href="#skills-%e7%9a%84%e7%9b%ae%e9%8c%84%e7%b5%90%e6%a7%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>skills/
+├── tdd-workflow/ # 測試驅動開發（含 README.md 與輔助模板）
+├── security-review/ # 安全稽核清單
+├── coding-standards/ # 語言最佳實踐
+├── continuous-learning/ # 從 session 自動抽取模式
+├── continuous-learning-v2/ # 升級版：帶信心評分的 Instinct 學習
+├── backend-patterns/ # API、資料庫、快取模式
+├── frontend-patterns/ # React、Next.js 模式
+├── eval-harness/ # 驗證迴圈評估
+├── verification-loop/ # 持續驗證
+├── iterative-retrieval/ # 子代理人漸進式 context 精煉
+├── strategic-compact/ # 手動 context 壓縮建議
+├── golang-patterns/ # Go 慣用法
+├── django-patterns/ # Django 模型與視圖模式
+├── python-patterns/ # Python 最佳實踐
+├── springboot-patterns/ # Java Spring Boot 模式
+├── e2e-testing/ # Playwright E2E 模式
+├── deployment-patterns/ # CI/CD、Docker、健康檢查
+├── api-design/ # REST API 設計規範
+├── skill-stocktake/ # 稽核現有 Skills 品質
+└── configure-ecc/ # 互動式安裝精靈&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>v1.8.0 目前提供超過 &lt;strong>102 個 Skills&lt;/strong>，涵蓋 TypeScript、Python、Go、Swift、Java、Perl、PHP 等語言生態。&lt;/p>
+&lt;h3>Skills 的工作原理&lt;span class="hx:absolute hx:-mt-20" id="skills-的工作原理">&lt;/span>
+&lt;a href="#skills-%e7%9a%84%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Skills 的載入方式是「Prompt Injection」——在 AI 收到特定觸發詞或 &lt;code>/command&lt;/code> 時，系統將 Skill 的 Markdown 內容注入到 context 中，讓 AI 依此執行。&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>使用者：/tdd &amp;#34;add user authentication&amp;#34;
+↓
+系統載入 tdd-workflow/SKILL.md 內容
+↓
+AI 依 Skill 定義的步驟執行：
+1. 先寫 failing test
+2. 實作最小可過測試的程式碼
+3. 重構
+4. 重複循環&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>OpenCode 中的 Skills 機制&lt;span class="hx:absolute hx:-mt-20" id="opencode-中的-skills-機制">&lt;/span>
+&lt;a href="#opencode-%e4%b8%ad%e7%9a%84-skills-%e6%a9%9f%e5%88%b6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>OpenCode 將 Skills 視為原生的「代理技能」系統，透過內建的 &lt;code>skill&lt;/code> 工具按需載入——&lt;strong>不是在對話開始時全部注入&lt;/strong>，而是讓 Agent 在需要時主動呼叫。&lt;/p>
+&lt;h4>搜尋路徑（含 Claude 相容路徑）&lt;span class="hx:absolute hx:-mt-20" id="搜尋路徑含-claude-相容路徑">&lt;/span>
+&lt;a href="#%e6%90%9c%e5%b0%8b%e8%b7%af%e5%be%91%e5%90%ab-claude-%e7%9b%b8%e5%ae%b9%e8%b7%af%e5%be%91" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>OpenCode 會自動掃描以下所有路徑，&lt;strong>包含 Claude Code 和 ECC 使用的路徑&lt;/strong>：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>優先順序&lt;/th>
+&lt;th>路徑&lt;/th>
+&lt;th>說明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>&lt;code>.opencode/skills/&amp;lt;name&amp;gt;/SKILL.md&lt;/code>&lt;/td>
+&lt;td>專案級 OpenCode Skills&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>&lt;code>~/.config/opencode/skills/&amp;lt;name&amp;gt;/SKILL.md&lt;/code>&lt;/td>
+&lt;td>全域 OpenCode Skills&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>&lt;code>.claude/skills/&amp;lt;name&amp;gt;/SKILL.md&lt;/code>&lt;/td>
+&lt;td>專案級 Claude 相容路徑&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>&lt;code>~/.claude/skills/&amp;lt;name&amp;gt;/SKILL.md&lt;/code>&lt;/td>
+&lt;td>全域 Claude 相容路徑&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>&lt;code>.agents/skills/&amp;lt;name&amp;gt;/SKILL.md&lt;/code>&lt;/td>
+&lt;td>專案級 Agents 相容路徑&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>&lt;code>~/.agents/skills/&amp;lt;name&amp;gt;/SKILL.md&lt;/code>&lt;/td>
+&lt;td>全域 Agents 相容路徑&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>&lt;strong>重點：&lt;/strong> OpenCode 會讀取 &lt;code>~/.claude/skills/&lt;/code> 下的 ECC Skills，意即將 ECC 安裝到 Claude Code 後，OpenCode 可以&lt;strong>直接使用全部 102 個 Skills，不需要重複安裝&lt;/strong>。&lt;/p>
+&lt;/blockquote>
+&lt;p>對於專案本地路徑，OpenCode 從當前工作目錄&lt;strong>向上遍歷到 git 根目錄&lt;/strong>，逐層掃描所有符合的 &lt;code>skills/*/SKILL.md&lt;/code>。&lt;/p>
+&lt;h4>SKILL.md 的格式規範&lt;span class="hx:absolute hx:-mt-20" id="skillmd-的格式規範">&lt;/span>
+&lt;a href="#skillmd-%e7%9a%84%e6%a0%bc%e5%bc%8f%e8%a6%8f%e7%af%84" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>每個 &lt;code>SKILL.md&lt;/code> 必須以 YAML frontmatter 開頭：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name: tdd-workflow
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>description: Test-driven development workflow enforcing Red-Green-Refactor cycle
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>license: MIT
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>compatibility: opencode
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 何時使用
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>需要實作新功能或修復 bug 時，確保先有測試再有實作。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 執行步驟
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">1.&lt;/span> 寫一個 failing test（紅燈）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> 實作最小可過測試的程式碼（綠燈）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> 重構（清理）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>4. 重複直到功能完成&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>名稱規則&lt;/strong>：&lt;code>name&lt;/code> 必須與目錄名稱一致，僅允許小寫字母、數字與單一連字號（&lt;code>^[a-z0-9]+(-[a-z0-9]+)*$&lt;/code>）。&lt;/p>
+&lt;h4>Agent 如何載入 Skill&lt;span class="hx:absolute hx:-mt-20" id="agent-如何載入-skill">&lt;/span>
+&lt;a href="#agent-%e5%a6%82%e4%bd%95%e8%bc%89%e5%85%a5-skill" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>OpenCode 在 &lt;code>skill&lt;/code> 工具的描述中列出所有可用 Skills：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;available_skills&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;skill&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;name&amp;gt;&lt;/span>tdd-workflow&lt;span style="color:#f92672">&amp;lt;/name&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;description&amp;gt;&lt;/span>Test-driven development workflow enforcing Red-Green-Refactor cycle&lt;span style="color:#f92672">&amp;lt;/description&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/skill&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;skill&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;name&amp;gt;&lt;/span>security-review&lt;span style="color:#f92672">&amp;lt;/name&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;description&amp;gt;&lt;/span>Security checklist for identifying common vulnerabilities&lt;span style="color:#f92672">&amp;lt;/description&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/skill&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;/available_skills&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Agent 根據任務需求主動呼叫：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>skill({ name: &amp;#34;tdd-workflow&amp;#34; })&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>這種「按需載入」的設計避免了在 session 開始時把所有 Skill 內容一次性塞入 context，是 Context Engineering 的重要一環。&lt;/p>
+&lt;h4>設定 Skill 的存取權限&lt;span class="hx:absolute hx:-mt-20" id="設定-skill-的存取權限">&lt;/span>
+&lt;a href="#%e8%a8%ad%e5%ae%9a-skill-%e7%9a%84%e5%ad%98%e5%8f%96%e6%ac%8a%e9%99%90" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>可在 &lt;code>opencode.json&lt;/code> 中控制哪些 Skill 可被存取：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;permission&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;skill&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;*&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;allow&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;internal-*&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;deny&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;experimental-*&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ask&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>也可針對特定 Agent 覆寫權限，或直接在 Agent 的 Markdown frontmatter 中設定：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>description: Readonly code reviewer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mode: subagent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>permission:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> skill:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;#34;security-*&amp;#34;: &amp;#34;allow&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;#34;deploy-*&amp;#34;: &amp;#34;deny&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tools:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> skill: false # 完全停用 skill 工具（若此 Agent 不需要）
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>呼叫方式：在對話中說「使用 tdd-workflow skill」，或觸發對應的 &lt;code>/command&lt;/code>。&lt;/p>
+&lt;hr>
+&lt;h2>第三章：Context Engineering（情境工程）&lt;span class="hx:absolute hx:-mt-20" id="第三章context-engineering情境工程">&lt;/span>
+&lt;a href="#%e7%ac%ac%e4%b8%89%e7%ab%a0context-engineering%e6%83%85%e5%a2%83%e5%b7%a5%e7%a8%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>為什麼 Context 管理至關重要&lt;span class="hx:absolute hx:-mt-20" id="為什麼-context-管理至關重要">&lt;/span>
+&lt;a href="#%e7%82%ba%e4%bb%80%e9%ba%bc-context-%e7%ae%a1%e7%90%86%e8%87%b3%e9%97%9c%e9%87%8d%e8%a6%81" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Claude Code 的 context window 約為 200k tokens，但實際可用量取決於已載入的工具、MCP server 定義、Rules、以及對話歷史。一個設定不當的環境中，&lt;strong>可用 context 可能只有理論上限的 35%&lt;/strong>。&lt;/p>
+&lt;p>ECC 的 Context Engineering 策略圍繞幾個核心原則：&lt;/p>
+&lt;h3>原則一：Token 最佳化&lt;span class="hx:absolute hx:-mt-20" id="原則一token-最佳化">&lt;/span>
+&lt;a href="#%e5%8e%9f%e5%89%87%e4%b8%80token-%e6%9c%80%e4%bd%b3%e5%8c%96" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>MCP Server 管理：&lt;/strong>
+MCP server 定義在初始化時會佔用大量 token。ECC 建議：&lt;/p>
+&lt;ul>
+&lt;li>設定檔中可有 20-30 個 MCP&lt;/li>
+&lt;li>但每個 session 僅啟用 5-10 個&lt;/li>
+&lt;li>關閉非必要 MCP 可釋放大量 context 空間&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>規則：同時啟用的工具數量保持在 80 個以下。&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// ~/.claude/settings.json 停用非必要的 MCP
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;disabledMcpServers&amp;#34;&lt;/span>: [&lt;span style="color:#e6db74">&amp;#34;AbletonMCP&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;magic&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;clickhouse&amp;#34;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>System Prompt 精簡：&lt;/strong>
+CLAUDE.md（或 OpenCode 的 system prompt）應保持精簡：&lt;/p>
+&lt;ul>
+&lt;li>移除重複說明&lt;/li>
+&lt;li>用「引用」代替「複製」——在 CLAUDE.md 中用 &lt;code>@skill tdd-workflow&lt;/code> 引用，而非複製全文&lt;/li>
+&lt;li>善用 Codemaps（程式碼地圖）讓 AI 快速導航而不需讀取整個檔案&lt;/li>
+&lt;/ul>
+&lt;h3>原則二：Context 壓縮策略（Strategic Compaction）&lt;span class="hx:absolute hx:-mt-20" id="原則二context-壓縮策略strategic-compaction">&lt;/span>
+&lt;a href="#%e5%8e%9f%e5%89%87%e4%ba%8ccontext-%e5%a3%93%e7%b8%ae%e7%ad%96%e7%95%a5strategic-compaction" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>長 session 中 context 會「腐化」——AI 對早期討論的記憶變得模糊。ECC 提供兩種應對機制：&lt;/p>
+&lt;p>&lt;strong>手動壓縮（strategic-compact Skill）：&lt;/strong>
+在長 session 中呼叫 &lt;code>/compact&lt;/code> 指令，AI 會：&lt;/p>
+&lt;ol>
+&lt;li>分析哪些 context 仍然重要&lt;/li>
+&lt;li>建議壓縮哪些部分&lt;/li>
+&lt;li>保留關鍵決策與進行中任務的狀態&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>自動壓縮 Hook（PreCompact Hook）：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;PreCompact&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;hooks&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;command&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;command&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;node scripts/hooks/pre-compact.js&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>在系統觸發自動壓縮前，&lt;code>pre-compact.js&lt;/code> 會先將當前狀態存入持久化記憶檔，確保重要資訊不遺失。&lt;/p>
+&lt;h3>原則三：記憶持久化（Memory Persistence）&lt;span class="hx:absolute hx:-mt-20" id="原則三記憶持久化memory-persistence">&lt;/span>
+&lt;a href="#%e5%8e%9f%e5%89%87%e4%b8%89%e8%a8%98%e6%86%b6%e6%8c%81%e4%b9%85%e5%8c%96memory-persistence" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>ECC 透過 Hooks 實現跨 session 的記憶持久化，解決每次開啟新 session 都要重新建立 context 的問題：&lt;/p>
+&lt;p>&lt;strong>Session 開始時（SessionStart Hook）：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// scripts/hooks/session-start.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">memoryPath&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#a6e22e">projectRoot&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.claude&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;MEMORY.md&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">existsSync&lt;/span>(&lt;span style="color:#a6e22e">memoryPath&lt;/span>)) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">memory&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">readFileSync&lt;/span>(&lt;span style="color:#a6e22e">memoryPath&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;utf8&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// 將記憶注入到 context
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">process&lt;/span>.&lt;span style="color:#a6e22e">stdout&lt;/span>.&lt;span style="color:#a6e22e">write&lt;/span>(&lt;span style="color:#a6e22e">memory&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Session 結束時（Stop Hook）：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// scripts/hooks/session-end.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 從 session 中抽取：
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// - 重要決策
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// - 待完成任務
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// - 發現的模式
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 寫入 MEMORY.md 供下次使用
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>原則四：漸進式 Context 精煉（Iterative Retrieval）&lt;span class="hx:absolute hx:-mt-20" id="原則四漸進式-context-精煉iterative-retrieval">&lt;/span>
+&lt;a href="#%e5%8e%9f%e5%89%87%e5%9b%9b%e6%bc%b8%e9%80%b2%e5%bc%8f-context-%e7%b2%be%e7%85%89iterative-retrieval" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>當子代理人需要理解大型程式碼庫時，不應一次載入所有相關檔案（context bomb）。&lt;code>iterative-retrieval&lt;/code> Skill 定義了一個漸進式的資訊收集策略：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>階段 1：高層次搜尋（Glob &amp;#43; 目錄結構）
+↓ 找到候選檔案
+階段 2：關鍵檔案精讀（Read 指定段落）
+↓ 確認相關模式
+階段 3：按需深入（只讀真正需要的部分）&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>這種方式避免了「一次讀取所有相關檔案」的 context 浪費。&lt;/p>
+&lt;h3>原則五：Context 模式切換&lt;span class="hx:absolute hx:-mt-20" id="原則五context-模式切換">&lt;/span>
+&lt;a href="#%e5%8e%9f%e5%89%87%e4%ba%94context-%e6%a8%a1%e5%bc%8f%e5%88%87%e6%8f%9b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>ECC 的 &lt;code>contexts/&lt;/code> 目錄提供三種&lt;strong>動態 system prompt 注入 context&lt;/strong>：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Context 模式&lt;/th>
+&lt;th>內容&lt;/th>
+&lt;th>使用時機&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>dev.md&lt;/code>&lt;/td>
+&lt;td>開發模式指引（TDD、建置流程）&lt;/td>
+&lt;td>寫新功能時&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>review.md&lt;/code>&lt;/td>
+&lt;td>程式碼審查模式（安全、效能、可讀性）&lt;/td>
+&lt;td>PR review 時&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>research.md&lt;/code>&lt;/td>
+&lt;td>探索模式（廣度優先、記錄發現）&lt;/td>
+&lt;td>調查陌生程式庫時&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>切換方式（Claude Code）：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/context switch dev &lt;span style="color:#75715e"># 切換為開發模式&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/context switch review &lt;span style="color:#75715e"># 切換為審查模式&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>原則六：模型路由（Model Routing）&lt;span class="hx:absolute hx:-mt-20" id="原則六模型路由model-routing">&lt;/span>
+&lt;a href="#%e5%8e%9f%e5%89%87%e5%85%ad%e6%a8%a1%e5%9e%8b%e8%b7%af%e7%94%b1model-routing" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>不同任務應使用不同規格的模型，以節省 token 成本：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>任務類型&lt;/th>
+&lt;th>建議模型&lt;/th>
+&lt;th>原因&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>快速格式化、簡單問答&lt;/td>
+&lt;td>Claude Haiku&lt;/td>
+&lt;td>成本低，速度快&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>一般開發任務&lt;/td>
+&lt;td>Claude Sonnet&lt;/td>
+&lt;td>平衡效能與成本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>複雜架構設計、安全分析&lt;/td>
+&lt;td>Claude Opus&lt;/td>
+&lt;td>最強推理能力&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>ECC v1.8.0 新增的 &lt;code>/model-route&lt;/code> 指令可幫助 AI 自動選擇合適模型。&lt;/p>
+&lt;hr>
+&lt;h2>第四章：AgentShield（安全掃描工具）&lt;span class="hx:absolute hx:-mt-20" id="第四章agentshield安全掃描工具">&lt;/span>
+&lt;a href="#%e7%ac%ac%e5%9b%9b%e7%ab%a0agentshield%e5%ae%89%e5%85%a8%e6%8e%83%e6%8f%8f%e5%b7%a5%e5%85%b7" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>背景&lt;span class="hx:absolute hx:-mt-20" id="背景">&lt;/span>
+&lt;a href="#%e8%83%8c%e6%99%af" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>AgentShield 是 Affaan Mustafa 在 ECC 開發過程中，因發現 AI agent 設定存在大量安全漏洞而開發的&lt;strong>安全稽核工具&lt;/strong>，同樣是 Anthropic Hackathon 的成果之一。&lt;/p>
+&lt;p>核心資料：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1,282 個測試案例&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>98% 程式碼覆蓋率&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>102 條靜態分析規則&lt;/strong>&lt;/li>
+&lt;li>可直接透過 &lt;code>npx ecc-agentshield&lt;/code> 執行，無需安裝&lt;/li>
+&lt;/ul>
+&lt;h3>AgentShield 掃描的範圍&lt;span class="hx:absolute hx:-mt-20" id="agentshield-掃描的範圍">&lt;/span>
+&lt;a href="#agentshield-%e6%8e%83%e6%8f%8f%e7%9a%84%e7%af%84%e5%9c%8d" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>AgentShield 對以下五個類別進行掃描：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>掃描類別&lt;/th>
+&lt;th>說明&lt;/th>
+&lt;th>規則數量&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Secrets Detection&lt;/strong>&lt;/td>
+&lt;td>偵測硬編碼的 API key、密碼、Token（14 種模式）&lt;/td>
+&lt;td>~25 條&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Permission Auditing&lt;/strong>&lt;/td>
+&lt;td>稽核 agent 的工具權限是否過度寬鬆&lt;/td>
+&lt;td>~20 條&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Hook Injection Analysis&lt;/strong>&lt;/td>
+&lt;td>分析 hooks 是否存在指令注入風險&lt;/td>
+&lt;td>~22 條&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>MCP Server Risk Profiling&lt;/strong>&lt;/td>
+&lt;td>評估 MCP server 設定的風險等級&lt;/td>
+&lt;td>~18 條&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Agent Config Review&lt;/strong>&lt;/td>
+&lt;td>審查 agent 定義、skill 內容、rules 設定&lt;/td>
+&lt;td>~17 條&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3>三種使用模式&lt;span class="hx:absolute hx:-mt-20" id="三種使用模式">&lt;/span>
+&lt;a href="#%e4%b8%89%e7%a8%ae%e4%bd%bf%e7%94%a8%e6%a8%a1%e5%bc%8f" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>快速掃描（標準模式）：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npx ecc-agentshield scan&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>執行靜態分析，輸出 A-F 等級評分（類似 SSL 安全評分）。&lt;/p>
+&lt;p>&lt;strong>自動修復模式：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npx ecc-agentshield scan --fix&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>對安全的問題（如移除 hardcoded secret 的佔位符）自動套用修復。&lt;/p>
+&lt;p>&lt;strong>深度分析模式（Opus 三代理人模式）：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npx ecc-agentshield scan --opus --stream&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>啟動三個 Claude Opus 代理人組成的「紅隊/藍隊/稽核師」管線：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>紅隊（攻擊者）&lt;/strong>：主動尋找可利用的漏洞鏈&lt;/li>
+&lt;li>&lt;strong>藍隊（防守者）&lt;/strong>：評估現有防護措施的有效性&lt;/li>
+&lt;li>&lt;strong>稽核師&lt;/strong>：綜合兩方分析，產出優先級排序的風險報告&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>輸出格式：&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npx ecc-agentshield scan --format json &lt;span style="color:#75715e"># CI/CD 管線整合&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npx ecc-agentshield scan --format html &lt;span style="color:#75715e"># 可讀性報告&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npx ecc-agentshield scan --format md &lt;span style="color:#75715e"># Markdown 報告&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>當發現 Critical 問題時，exit code 為 2，可作為 CI/CD 的 build gate。&lt;/p>
+&lt;h3>在 Claude Code / OpenCode 中使用&lt;span class="hx:absolute hx:-mt-20" id="在-claude-code--opencode-中使用">&lt;/span>
+&lt;a href="#%e5%9c%a8-claude-code--opencode-%e4%b8%ad%e4%bd%bf%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>透過 ECC 的 &lt;code>security-scan&lt;/code> Skill，可在 agent 對話中直接觸發掃描：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>/security-scan&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>或明確指定掃描目標：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>/security-scan --deep # 啟用 Opus 深度模式
+/security-scan --ci # 輸出 JSON 格式供 CI 使用&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>為什麼需要 AgentShield？&lt;span class="hx:absolute hx:-mt-20" id="為什麼需要-agentshield">&lt;/span>
+&lt;a href="#%e7%82%ba%e4%bb%80%e9%ba%bc%e9%9c%80%e8%a6%81-agentshield" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>AI agent 設定檔（CLAUDE.md、settings.json、hooks.json）往往包含：&lt;/p>
+&lt;ul>
+&lt;li>潛在的 prompt injection 漏洞&lt;/li>
+&lt;li>過度寬鬆的工具權限（agent 能讀取不需要的系統資源）&lt;/li>
+&lt;li>hooks 中的 shell injection 風險&lt;/li>
+&lt;li>MCP server 連接到不可信任的外部服務&lt;/li>
+&lt;/ul>
+&lt;p>隨著 agent 自動化程度提高，這些設定上的細節疏忽可能導致嚴重的安全後果。AgentShield 的目標是讓安全稽核像執行 lint 一樣簡單。&lt;/p>
+&lt;hr>
+&lt;h2>第五章：MiniClaw 哲學（安全設計原則）&lt;span class="hx:absolute hx:-mt-20" id="第五章miniclaw-哲學安全設計原則">&lt;/span>
+&lt;a href="#%e7%ac%ac%e4%ba%94%e7%ab%a0miniclaw-%e5%93%b2%e5%ad%b8%e5%ae%89%e5%85%a8%e8%a8%ad%e8%a8%88%e5%8e%9f%e5%89%87" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>MiniClaw 是什麼？&lt;span class="hx:absolute hx:-mt-20" id="miniclaw-是什麼">&lt;/span>
+&lt;a href="#miniclaw-%e6%98%af%e4%bb%80%e9%ba%bc" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>MiniClaw &lt;strong>不是一個產品或工具&lt;/strong>，而是 Affaan 在分析 AI agent 安全風險後，提出的一套&lt;strong>極簡主義 agent 設計哲學&lt;/strong>。&lt;/p>
+&lt;p>這個概念源自他在《The Hidden Danger of OpenClaw》文章中，對比分析了大型多通道 agent 系統（OpenClaw）與精簡安全設計（MiniClaw）的差異。&lt;/p>
+&lt;h3>核心原則：最少攻擊面&lt;span class="hx:absolute hx:-mt-20" id="核心原則最少攻擊面">&lt;/span>
+&lt;a href="#%e6%a0%b8%e5%bf%83%e5%8e%9f%e5%89%87%e6%9c%80%e5%b0%91%e6%94%bb%e6%93%8a%e9%9d%a2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>設計維度&lt;/th>
+&lt;th>最大化整合（高風險）&lt;/th>
+&lt;th>MiniClaw 原則（低風險）&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>存取點數量&lt;/strong>&lt;/td>
+&lt;td>多個（Telegram、Discord、X、Email、Browser）&lt;/td>
+&lt;td>單一（SSH）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>執行環境&lt;/strong>&lt;/td>
+&lt;td>主機系統，廣泛存取&lt;/td>
+&lt;td>容器化，嚴格限制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>介面&lt;/strong>&lt;/td>
+&lt;td>視覺化 Dashboard&lt;/td>
+&lt;td>無頭終端機（tmux）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Skills 來源&lt;/strong>&lt;/td>
+&lt;td>社群市集（未審核）&lt;/td>
+&lt;td>手動稽核，僅本地&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>網路暴露&lt;/strong>&lt;/td>
+&lt;td>多個服務埠&lt;/td>
+&lt;td>僅 SSH（Tailscale mesh）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>爆炸半徑&lt;/strong>&lt;/td>
+&lt;td>所有 agent 可存取資源&lt;/td>
+&lt;td>隔離至專案目錄&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>安全姿態&lt;/strong>&lt;/td>
+&lt;td>隱性（不知道暴露了什麼）&lt;/td>
+&lt;td>顯性（每個權限都是主動選擇）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3>MiniClaw 實踐範例&lt;span class="hx:absolute hx:-mt-20" id="miniclaw-實踐範例">&lt;/span>
+&lt;a href="#miniclaw-%e5%af%a6%e8%b8%90%e7%af%84%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>作者本人的實際設定：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>Mac Mini（無頭，24/7 運行）
+├── 僅 SSH 存取（ed25519 金鑰認證，無密碼）
+├── Tailscale mesh（無對外開放 port）
+├── tmux session（持久化，斷線重連不失狀態）
+├── Claude Code with ECC 設定
+│ ├── 手動稽核的 Skills（每個 Skill 逐行審閱）
+│ ├── 僅用於品質閘控的 Hooks（非外部通道存取）
+│ └── 預設唯讀權限的 Agents
+└── 無多通道整合
+└── 無 Telegram、無 Discord、無 X、無 Email 自動化&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>最小權限（Least Agency）&lt;span class="hx:absolute hx:-mt-20" id="最小權限least-agency">&lt;/span>
+&lt;a href="#%e6%9c%80%e5%b0%8f%e6%ac%8a%e9%99%90least-agency" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>MiniClaw 呼應 OWASP Agentic Applications Top 10 中的**「最小代理原則」（Least Agency）**：&lt;/p>
+&lt;blockquote>
+&lt;p>只授予 agent 執行安全、有界限任務所需的最低自主性。&lt;/p>
+&lt;/blockquote>
+&lt;p>具體實踐：&lt;/p>
+&lt;ul>
+&lt;li>Agent 預設為&lt;strong>唯讀&lt;/strong>，需要寫入時顯式授權&lt;/li>
+&lt;li>每個 Skill 的工具存取範圍&lt;strong>事先明確定義&lt;/strong>&lt;/li>
+&lt;li>Hook 腳本必須&lt;strong>逐行稽核&lt;/strong>，不安裝未讀過的社群 Hook&lt;/li>
+&lt;li>MCP server 連接外部服務時，&lt;strong>明確記錄&lt;/strong>其存取範圍&lt;/li>
+&lt;/ul>
+&lt;h3>便利性與安全性的取捨&lt;span class="hx:absolute hx:-mt-20" id="便利性與安全性的取捨">&lt;/span>
+&lt;a href="#%e4%be%bf%e5%88%a9%e6%80%a7%e8%88%87%e5%ae%89%e5%85%a8%e6%80%a7%e7%9a%84%e5%8f%96%e6%8d%a8" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>MiniClaw 哲學並非主張「不使用 agent 自動化」，而是強調：&lt;/p>
+&lt;p>&lt;strong>連接 agent 到通訊管道（Telegram、Discord 等）時，你在用安全換取便利——這是真實的取捨，你應該在充分了解風險的情況下做出選擇。&lt;/strong>&lt;/p>
+&lt;p>對於技術使用者，MiniClaw 模式提供「90% 的生產力，5% 的攻擊面」。&lt;/p>
+&lt;hr>
+&lt;h2>安裝方式&lt;span class="hx:absolute hx:-mt-20" id="安裝方式">&lt;/span>
+&lt;a href="#%e5%ae%89%e8%a3%9d%e6%96%b9%e5%bc%8f" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Plugin 安裝（推薦）&lt;span class="hx:absolute hx:-mt-20" id="plugin-安裝推薦">&lt;/span>
+&lt;a href="#plugin-%e5%ae%89%e8%a3%9d%e6%8e%a8%e8%96%a6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>最簡便的方式是透過 Claude Code Plugin 系統安裝：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 加入 marketplace&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/plugin marketplace add affaan-m/everything-claude-code
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 安裝 plugin&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/plugin install everything-claude-code@everything-claude-code&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>完成後可立即存取 21 個 Agents、102 個 Skills、52 個 Commands。&lt;/p>
+&lt;h3>手動安裝&lt;span class="hx:absolute hx:-mt-20" id="手動安裝">&lt;/span>
+&lt;a href="#%e6%89%8b%e5%8b%95%e5%ae%89%e8%a3%9d" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>若需要選擇性安裝或客製化設定：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 1. Clone 專案&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https://github.com/affaan-m/everything-claude-code.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd everything-claude-code
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 2. 安裝依賴&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 3. 安裝語言對應的 Rules（選擇你的語言）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./install.sh typescript &lt;span style="color:#75715e"># macOS/Linux&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./install.sh typescript python &lt;span style="color:#75715e"># 多語言&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./install.sh --target cursor typescript &lt;span style="color:#75715e"># 指定目標工具&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Windows PowerShell&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#ae81ff">\i&lt;/span>nstall.ps1 typescript&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Hook 環境控制&lt;span class="hx:absolute hx:-mt-20" id="hook-環境控制">&lt;/span>
+&lt;a href="#hook-%e7%92%b0%e5%a2%83%e6%8e%a7%e5%88%b6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>ECC v1.8.0 新增了 Hook 執行時期控制，可在不修改設定檔的情況下調整行為：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 設定 Hook 嚴格程度（minimal | standard | strict）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export ECC_HOOK_PROFILE&lt;span style="color:#f92672">=&lt;/span>standard
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 停用特定 Hook（逗號分隔）&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export ECC_DISABLED_HOOKS&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;pre:bash:tmux-reminder,post:edit:typecheck&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h2>與 OpenCode 整合&lt;span class="hx:absolute hx:-mt-20" id="與-opencode-整合">&lt;/span>
+&lt;a href="#%e8%88%87-opencode-%e6%95%b4%e5%90%88" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>整合步驟&lt;span class="hx:absolute hx:-mt-20" id="整合步驟">&lt;/span>
+&lt;a href="#%e6%95%b4%e5%90%88%e6%ad%a5%e9%a9%9f" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>方式一：Plugin 設定（推薦）&lt;/strong>&lt;/p>
+&lt;p>在 OpenCode 設定檔（&lt;code>~/.config/opencode/config.json&lt;/code> 或 &lt;code>.opencode/config.json&lt;/code>）中加入：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;plugins&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;everything-claude-code&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>重啟 OpenCode 後，Plugin 中的 Skills、Commands、Agents 等元件自動載入。&lt;/p>
+&lt;p>&lt;strong>方式二：手動路徑設定&lt;/strong>&lt;/p>
+&lt;p>若使用手動安裝，可在設定中指定元件路徑：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;skillsDir&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/path/to/everything-claude-code/skills&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;hooksDir&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/path/to/everything-claude-code/hooks&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h3>使用場景範例&lt;span class="hx:absolute hx:-mt-20" id="使用場景範例">&lt;/span>
+&lt;a href="#%e4%bd%bf%e7%94%a8%e5%a0%b4%e6%99%af%e7%af%84%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;h4>場景一：Skills 整合——套用 TDD 工作流程&lt;span class="hx:absolute hx:-mt-20" id="場景一skills-整合套用-tdd-工作流程">&lt;/span>
+&lt;a href="#%e5%a0%b4%e6%99%af%e4%b8%80skills-%e6%95%b4%e5%90%88%e5%a5%97%e7%94%a8-tdd-%e5%b7%a5%e4%bd%9c%e6%b5%81%e7%a8%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>&lt;code>tdd-workflow&lt;/code> Skill 讓 OpenCode 自動遵循紅綠重構（Red-Green-Refactor）循環。&lt;/p>
+&lt;p>啟用後在對話中呼叫：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>/tdd &amp;#34;add user authentication&amp;#34;&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>OpenCode 會依 Skill 的步驟定義：先寫 failing test、再最小化實作、最後重構，並透過 TodoWrite 工具標記每個步驟的進度。&lt;/p>
+&lt;h4>場景二：Hooks 自動化——提交前品質閘控&lt;span class="hx:absolute hx:-mt-20" id="場景二hooks-自動化提交前品質閘控">&lt;/span>
+&lt;a href="#%e5%a0%b4%e6%99%af%e4%ba%8chooks-%e8%87%aa%e5%8b%95%e5%8c%96%e6%8f%90%e4%ba%a4%e5%89%8d%e5%93%81%e8%b3%aa%e9%96%98%e6%8e%a7" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>透過 PostToolUse Hook，每次編輯 TypeScript 檔案後自動觸發型別檢查：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;PostToolUse&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;matcher&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Edit &amp;amp;&amp;amp; (.ts|.tsx)&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;hooks&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;type&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;command&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;command&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsc --noEmit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>若型別檢查失敗，Hook 的回傳會自動通知 OpenCode 進行修復，形成自我修正迴圈。&lt;/p>
+&lt;h4>場景三：Agent 委派——安全稽核子代理人&lt;span class="hx:absolute hx:-mt-20" id="場景三agent-委派安全稽核子代理人">&lt;/span>
+&lt;a href="#%e5%a0%b4%e6%99%af%e4%b8%89agent-%e5%a7%94%e6%b4%be%e5%ae%89%e5%85%a8%e7%a8%bd%e6%a0%b8%e5%ad%90%e4%bb%a3%e7%90%86%e4%ba%ba" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>當需要對一批檔案進行安全審查時，可委派給 &lt;code>security-reviewer&lt;/code> Agent：&lt;/p>
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+&lt;div>&lt;pre>&lt;code>請使用 security-reviewer agent 檢查 src/api/ 目錄下所有 endpoint 的認證邏輯&lt;/code>&lt;/pre>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+>
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;code>security-reviewer&lt;/code> Agent 具有唯讀存取權限，僅能讀取程式碼而不能修改，降低誤操作風險。&lt;/p>
+&lt;h4>場景四：Context 工程——Session 記憶持久化&lt;span class="hx:absolute hx:-mt-20" id="場景四context-工程session-記憶持久化">&lt;/span>
+&lt;a href="#%e5%a0%b4%e6%99%af%e5%9b%9bcontext-%e5%b7%a5%e7%a8%8bsession-%e8%a8%98%e6%86%b6%e6%8c%81%e4%b9%85%e5%8c%96" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>在長期專案中，透過 ECC 的記憶持久化 Hook，每次關閉 session 前自動記錄：&lt;/p>
+&lt;ul>
+&lt;li>當前進行的任務清單&lt;/li>
+&lt;li>重要架構決策&lt;/li>
+&lt;li>下次應繼續的位置&lt;/li>
+&lt;/ul>
+&lt;p>下次開啟 session 時，這些資訊自動注入 context，AI 能立即繼續之前的工作而不需重新說明背景。&lt;/p>
+&lt;hr>
+&lt;h2>延伸資源&lt;span class="hx:absolute hx:-mt-20" id="延伸資源">&lt;/span>
+&lt;a href="#%e5%bb%b6%e4%bc%b8%e8%b3%87%e6%ba%90" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>GitHub 倉庫：&lt;/strong> &lt;a href="https://github.com/affaan-m/everything-claude-code"target="_blank" rel="noopener">https://github.com/affaan-m/everything-claude-code&lt;/a>&lt;/li>
+&lt;li>&lt;strong>短篇指南：&lt;/strong> &lt;a href="https://github.com/affaan-m/everything-claude-code/blob/main/the-shortform-guide.md"target="_blank" rel="noopener">The Shorthand Guide&lt;/a>（設定基礎、Hooks、Subagents）&lt;/li>
+&lt;li>&lt;strong>長篇指南：&lt;/strong> &lt;a href="https://github.com/affaan-m/everything-claude-code/blob/main/the-longform-guide.md"target="_blank" rel="noopener">The Longform Guide&lt;/a>（Token 優化、記憶持久化、並行化）&lt;/li>
+&lt;li>&lt;strong>安全指南：&lt;/strong> &lt;a href="https://github.com/affaan-m/everything-claude-code/blob/main/the-openclaw-guide.md"target="_blank" rel="noopener">The OpenClaw Security Guide&lt;/a>（Agent 安全風險分析）&lt;/li>
+&lt;li>&lt;strong>AgentShield on npm：&lt;/strong> &lt;a href="https://www.npmjs.com/package/ecc-agentshield"target="_blank" rel="noopener">ecc-agentshield&lt;/a>&lt;/li>
+&lt;li>&lt;strong>版本參考：&lt;/strong> v1.8.0（Mar 2026）&lt;/li>
+&lt;li>&lt;strong>授權：&lt;/strong> MIT License&lt;/li>
+&lt;/ul></description></item></channel></rss>
