@@ -1,13 +1,13 @@
 {{/*
   render-codeblock-plantuml.html
-  Hugo render hook for ```plantuml fenced code blocks.
+  Hugo render hook for plantuml fenced code blocks.
 
   Sends PlantUML source to the Kroki public API via POST at build time,
   receives an SVG response and embeds it inline in the page.
 
   On API failure: logs a warning and falls back to displaying raw source.
 
-  Spec: plantuml-rendering / "PlantUML code block 渲染為 SVG"
+  Spec: plantuml-rendering - PlantUML code block renders as SVG
 */}}
 
 {{- $diagram := .Inner -}}
@@ -19,14 +19,14 @@
     "headers" (dict "Content-Type" "text/plain")
 -}}
 
-{{- with resources.GetRemote $krokiURL $opts -}}
+{{- with try (resources.GetRemote $krokiURL $opts) -}}
   {{- with .Err -}}
-    {{- warnf "plantuml render hook: Kroki API error for diagram – %s" . -}}
+    {{- warnf "plantuml render hook: Kroki API error – %s" . -}}
     <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
-  {{- else -}}
+  {{- else with .Value -}}
     {{- .Content | safeHTML -}}
+  {{- else -}}
+    {{- warnf "plantuml render hook: Kroki returned no content for diagram at %s" $krokiURL -}}
+    <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
   {{- end -}}
-{{- else -}}
-  {{- warnf "plantuml render hook: failed to reach Kroki API at %s" $krokiURL -}}
-  <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
 {{- end -}}
