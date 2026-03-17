@@ -18,4 +18,4 @@
 - [x] 3.1 執行測試腳本，確認全部通過（Green 狀態）
 - [x] 3.2 執行 Hugo 建置（`npm run build` 或 `hugo` 於 `site/` 目錄），確認 exit code 0 且無錯誤
 - [x] 3.3 同步更新 `README.md`（若有課程資源索引區塊）
-- [ ] 3.4 git commit: `chore: verify build and sync readme for everything-claude-code resource`
+- [x] 3.4 git commit: `chore: verify build and sync readme for everything-claude-code resource`
