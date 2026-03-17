@@ -240,9 +240,14 @@ Loop（ReAct 循環）
     ▼
 Coding Agent（自主完成程式開發任務）
     │
-    │  但自主需要方向
+    │  Greenfield 階段：快速迭代
     ▼
-規格驅動開發（SDD）── 下一章的主題
+Vibe Coding ──▶ MVP 誕生
+    │
+    │  MVP 之後：Brownfield 開始
+    │  自主需要方向，既有 codebase 需要規格
+    ▼
+規格驅動開發（SDD）── 讓 MVP 成為可維護的產品
 ```
 
 理解了這條脈絡，你對 Copilot 和 OpenCode 的每一個行為都會有更清晰的解釋。讓我們繼續。
