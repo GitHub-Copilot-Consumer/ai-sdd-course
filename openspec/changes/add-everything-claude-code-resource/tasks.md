@@ -2,7 +2,7 @@
 
 - [x] 1.1 建立測試腳本 `site/tests/resources/everything-claude-code.test.js`，涵蓋以下驗證：頁面檔案存在、frontmatter 欄位完整（title、weight: 2、description、showToc: true）、包含 GitHub URL、包含五個核心元件名稱（Skills/Hooks/Commands/Rules/Instincts）、包含安裝說明段落、包含 OpenCode 整合區塊
 - [x] 1.2 執行測試，確認全部失敗（Red 狀態）
-- [ ] 1.3 git commit: `test: add spec tests for everything-claude-code resource page`
+- [x] 1.3 git commit: `test: add spec tests for everything-claude-code resource page`
 
 ## 2. 建立內容頁面
 
