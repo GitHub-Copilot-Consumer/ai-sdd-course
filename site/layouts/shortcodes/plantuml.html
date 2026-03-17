@@ -1,0 +1,39 @@
+{{/*
+  plantuml.html
+  Hugo shortcode for embedding PlantUML diagrams.
+
+  Usage:
+    {{</* plantuml */>}}
+    @startuml
+    Alice -> Bob: Hello
+    @enduml
+    {{</* /plantuml */>}}
+
+  Sends PlantUML source to the Kroki public API via POST at build time,
+  receives an SVG response and embeds it inline in the page.
+
+  On API failure: logs a warning and falls back to displaying raw source.
+
+  Spec: plantuml-rendering / "PlantUML shortcode 支援"
+*/}}
+
+{{- $diagram := .Inner -}}
+{{- $krokiURL := "https://kroki.io/plantuml/svg" -}}
+
+{{- $opts := dict
+    "method" "POST"
+    "body"   $diagram
+    "headers" (dict "Content-Type" "text/plain")
+-}}
+
+{{- with resources.GetRemote $krokiURL $opts -}}
+  {{- with .Err -}}
+    {{- warnf "plantuml shortcode: Kroki API error for diagram – %s" . -}}
+    <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
+  {{- else -}}
+    {{- .Content | safeHTML -}}
+  {{- end -}}
+{{- else -}}
+  {{- warnf "plantuml shortcode: failed to reach Kroki API at %s" $krokiURL -}}
+  <pre><code class="language-plantuml">{{ $diagram }}</code></pre>
+{{- end -}}
