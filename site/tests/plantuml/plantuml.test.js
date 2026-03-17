@@ -110,3 +110,33 @@ describe('plantuml-rendering: lesson pages contain plantuml diagrams', () => {
     expect(hasPlantuml).toBe(true);
   });
 });
+
+// -----------------------------------------------------------------------
+// Section 5: ch0-warmup.md course roadmap uses PlantUML (not ASCII art)
+// -----------------------------------------------------------------------
+describe('course-roadmap-plantuml: ch0-warmup.md roadmap conversion', () => {
+  const CH0_PATH = path.resolve(LESSONS_DIR, 'ch0-warmup.md');
+  let ch0Content;
+
+  beforeAll(() => {
+    ch0Content = fs.readFileSync(CH0_PATH, 'utf-8');
+  });
+
+  test('ch0-warmup.md 課程路線圖區段不含 ASCII art 框線字元', () => {
+    // Locate the roadmap section (after "## 課程路線圖")
+    const roadmapIndex = ch0Content.indexOf('## 課程路線圖');
+    expect(roadmapIndex).toBeGreaterThan(-1);
+    const roadmapSection = ch0Content.slice(roadmapIndex);
+    // ASCII box-drawing characters used in the original diagram
+    const asciiBoxChars = ['┌', '┐', '└', '┘', '├', '┤'];
+    asciiBoxChars.forEach((char) => {
+      expect(roadmapSection).not.toContain(char);
+    });
+  });
+
+  test('ch0-warmup.md 存在 plantuml fenced code block 含 @startuml 與 @enduml', () => {
+    expect(ch0Content).toContain('```plantuml');
+    expect(ch0Content).toContain('@startuml');
+    expect(ch0Content).toContain('@enduml');
+  });
+});
