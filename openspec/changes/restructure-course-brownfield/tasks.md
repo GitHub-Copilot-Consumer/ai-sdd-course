@@ -37,38 +37,38 @@
 
 ## 5. Ch4：Coding Agent 章節精簡
 
-- [ ] 5.1 新增 `site/content/lessons/ch4-coding-agent.md`，複製 `ch4-opencode.md` 內容作為基礎，更新 front matter（title、description），git commit `docs: create ch4-coding-agent.md with updated title and description`
-- [ ] 5.2 更新 `ch4-coding-agent.md`：移除 OpenCode 安裝步驟、API Key 設定，改為附錄引導句，git commit `docs: remove setup steps from ch4, add appendix reference`
-- [ ] 5.3 更新 `ch4-coding-agent.md`：移除 Ollama 安裝段落與離線開發 Lab，git commit `docs: remove ollama setup and offline lab from ch4 main content`
-- [ ] 5.4 更新 `ch4-coding-agent.md`：新增「Brownfield 開發注意事項」段落，git commit `docs: add brownfield development guidelines to ch4`
-- [ ] 5.5 更新 `ch4-coding-agent.md`：強化 Plan Mode 在 Brownfield 的角色說明，git commit `docs: enhance plan mode brownfield usage guidance in ch4`
-- [ ] 5.6 更新 `ch4-coding-agent.md`：Lab 改為「在 MVP 上依 tasks.md 實作」，git commit `docs: update ch4 lab to implementing from tasks on existing mvp`
-- [ ] 5.7 刪除 `site/content/lessons/ch4-opencode.md`，git commit `docs: remove deprecated ch4-opencode.md`
+- [x] 5.1 新增 `site/content/lessons/ch4-coding-agent.md`，複製 `ch4-opencode.md` 內容作為基礎，更新 front matter（title、description），git commit `docs: create ch4-coding-agent.md with updated title and description`
+- [x] 5.2 更新 `ch4-coding-agent.md`：移除 OpenCode 安裝步驟、API Key 設定，改為附錄引導句，git commit `docs: remove setup steps from ch4, add appendix reference`
+- [x] 5.3 更新 `ch4-coding-agent.md`：移除 Ollama 安裝段落與離線開發 Lab，git commit `docs: remove ollama setup and offline lab from ch4 main content`
+- [x] 5.4 更新 `ch4-coding-agent.md`：新增「Brownfield 開發注意事項」段落，git commit `docs: add brownfield development guidelines to ch4`
+- [x] 5.5 更新 `ch4-coding-agent.md`：強化 Plan Mode 在 Brownfield 的角色說明，git commit `docs: enhance plan mode brownfield usage guidance in ch4`
+- [x] 5.6 更新 `ch4-coding-agent.md`：Lab 改為「在 MVP 上依 tasks.md 實作」，git commit `docs: update ch4 lab to implementing from tasks on existing mvp`
+- [x] 5.7 刪除 `site/content/lessons/ch4-opencode.md`，git commit `docs: remove deprecated ch4-opencode.md`
 
 ## 6. Ch5：新增驗證、測試與可觀測性章節
 
-- [ ] 6.1 新增 `site/content/lessons/ch5-verify-observe.md`，建立完整 front matter（title：「驗證、測試與可觀測性」、weight: 6），git commit `docs: create ch5-verify-observe.md with front matter`
-- [ ] 6.2 撰寫 Ch5「Spec 驗證」段落（openspec verify 完整操作、drift detection 輸出範例、修復流程），git commit `docs: add spec verification section to ch5`
-- [ ] 6.3 撰寫 Ch5「AI 輔助測試」段落（scenario → test case 對應、Prompt 範例），git commit `docs: add ai-assisted testing section to ch5`
-- [ ] 6.4 撰寫 Ch5「運行時可觀測性」段落（structured logging Prompt 範例、error tracking 概念、health check），git commit `docs: add observability section to ch5`
-- [ ] 6.5 撰寫 Ch5「AI 輔助 Debug」段落（/opsx:explore 使用範例），git commit `docs: add ai-assisted debug section to ch5`
-- [ ] 6.6 撰寫 Ch5 收尾：openspec archive 完整操作（verify 通過後歸檔），git commit `docs: add openspec archive as ch5 closing section`
-- [ ] 6.7 撰寫 Ch5 Lab（verify + 修復 drift + observability + archive），git commit `docs: add lab to ch5 verify observe`
+- [x] 6.1 新增 `site/content/lessons/ch5-verify-observe.md`，建立完整 front matter（title：「驗證、測試與可觀測性」、weight: 6），git commit `docs: create ch5-verify-observe.md with front matter`
+- [x] 6.2 撰寫 Ch5「Spec 驗證」段落（openspec verify 完整操作、drift detection 輸出範例、修復流程），git commit `docs: add spec verification section to ch5`
+- [x] 6.3 撰寫 Ch5「AI 輔助測試」段落（scenario → test case 對應、Prompt 範例），git commit `docs: add ai-assisted testing section to ch5`
+- [x] 6.4 撰寫 Ch5「運行時可觀測性」段落（structured logging Prompt 範例、error tracking 概念、health check），git commit `docs: add observability section to ch5`
+- [x] 6.5 撰寫 Ch5「AI 輔助 Debug」段落（/opsx:explore 使用範例），git commit `docs: add ai-assisted debug section to ch5`
+- [x] 6.6 撰寫 Ch5 收尾：openspec archive 完整操作（verify 通過後歸檔），git commit `docs: add openspec archive as ch5 closing section`
+- [x] 6.7 撰寫 Ch5 Lab（verify + 修復 drift + observability + archive），git commit `docs: add lab to ch5 verify observe`
 
 ## 7. Ch6：團隊章節更新
 
-- [ ] 7.1 新增 `site/content/lessons/ch6-team.md`，複製 `ch5-team.md` 內容，更新 front matter（weight: 7），git commit `docs: create ch6-team.md with updated weight`
-- [ ] 7.2 更新 `ch6-team.md`：Roadmap 加入 Greenfield/Brownfield 分界說明，git commit `docs: update team roadmap to reflect greenfield-brownfield phases`
-- [ ] 7.3 更新 `ch6-team.md`：新增完整生命週期回顧段落（ASCII 圖示），git commit `docs: add full lifecycle review closing section to ch6`
-- [ ] 7.4 刪除 `site/content/lessons/ch5-team.md`，git commit `docs: remove deprecated ch5-team.md`
+- [x] 7.1 新增 `site/content/lessons/ch6-team.md`，複製 `ch5-team.md` 內容，更新 front matter（weight: 7），git commit `docs: create ch6-team.md with updated weight`
+- [x] 7.2 更新 `ch6-team.md`：Roadmap 加入 Greenfield/Brownfield 分界說明，git commit `docs: update team roadmap to reflect greenfield-brownfield phases`
+- [x] 7.3 更新 `ch6-team.md`：新增完整生命週期回顧段落（ASCII 圖示），git commit `docs: add full lifecycle review closing section to ch6`
+- [x] 7.4 刪除 `site/content/lessons/ch5-team.md`，git commit `docs: remove deprecated ch5-team.md`
 
 ## 8. 附錄：工具安裝
 
-- [ ] 8.1 新增 `site/content/lessons/appendix-setup.md`，建立 front matter（title：「附錄：工具安裝與環境設定」、weight: 999），git commit `docs: create appendix-setup.md with front matter`
-- [ ] 8.2 撰寫 OpenSpec CLI 安裝段落（從 ch2/ch3 整合過來），git commit `docs: add openspec cli setup to appendix`
-- [ ] 8.3 撰寫 OpenCode 安裝與 API Key 設定段落（從 ch4 搬移），git commit `docs: add opencode setup and api key config to appendix`
-- [ ] 8.4 撰寫 Ollama 安裝與本地模型段落（從 ch4 搬移），git commit `docs: add ollama local model setup to appendix`
+- [x] 8.1 新增 `site/content/lessons/appendix-setup.md`，建立 front matter（title：「附錄：工具安裝與環境設定」、weight: 999），git commit `docs: create appendix-setup.md with front matter`
+- [x] 8.2 撰寫 OpenSpec CLI 安裝段落（從 ch2/ch3 整合過來），git commit `docs: add openspec cli setup to appendix`
+- [x] 8.3 撰寫 OpenCode 安裝與 API Key 設定段落（從 ch4 搬移），git commit `docs: add opencode setup and api key config to appendix`
+- [x] 8.4 撰寫 Ollama 安裝與本地模型段落（從 ch4 搬移），git commit `docs: add ollama local model setup to appendix`
 
 ## 9. 收尾
 
-- [ ] 9.1 更新 `README.md`，反映新的課程結構與章節列表，git commit `docs: sync readme with new course chapter structure`
+- [x] 9.1 更新 `README.md`，反映新的課程結構與章節列表，git commit `docs: sync readme with new course chapter structure`
