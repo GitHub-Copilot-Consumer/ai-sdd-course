@@ -9,6 +9,8 @@
 // --- Constants ---
 const SLIDE_SEPARATOR_TAG = 'HR';
 const PRESENTATION_CONTENT_SELECTOR = '.content';
+const NO_SLIDE_CLASS = 'no-slide';
+const SLIDE_SPLIT_COMMENT = 'split';
 
 // --- State ---
 let slides = [];
@@ -17,8 +19,49 @@ let currentIndex = 0;
 // --- Slide Building ---
 
 /**
+ * Returns true if a node group contains only whitespace text nodes (or is empty).
+ * Used to filter out empty groups produced by edge-placed split comments.
+ *
+ * @param {Node[]} group
+ * @returns {boolean}
+ */
+function isEmptyGroup(group) {
+  if (group.length === 0) return true;
+  return group.every(
+    node => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() === ''
+  );
+}
+
+/**
+ * Splits a single node array into sub-arrays using COMMENT_NODE markers whose
+ * nodeValue (trimmed) equals SLIDE_SPLIT_COMMENT. The comment nodes themselves
+ * are not included in any sub-array. Empty sub-arrays are filtered out.
+ *
+ * @param {Node[]} group
+ * @returns {Node[][]} one or more sub-groups
+ */
+function splitGroupByComment(group) {
+  const subGroups = [];
+  let current = [];
+
+  for (const node of group) {
+    if (node.nodeType === Node.COMMENT_NODE && node.nodeValue.trim() === SLIDE_SPLIT_COMMENT) {
+      subGroups.push(current);
+      current = [];
+    } else {
+      current.push(node);
+    }
+  }
+  subGroups.push(current);
+
+  return subGroups.filter(g => !isEmptyGroup(g));
+}
+
+/**
  * Reads the DOM content area and splits it into slide arrays
- * using <hr> elements as boundaries.
+ * using <hr> elements as boundaries. Within each <hr>-bounded section,
+ * <!-- split --> comment nodes further divide the section into sub-slides.
+ * Elements with class NO_SLIDE_CLASS are excluded from all slide groups.
  *
  * @returns {Array<Array<Node>>} array of node-groups, one per slide
  */
@@ -27,22 +70,33 @@ function buildSlides() {
   if (!container) return [];
 
   const nodes = Array.from(container.childNodes);
-  const groups = [];
+  const roughGroups = [];
   let currentGroup = [];
 
   for (const node of nodes) {
     if (node.nodeName === SLIDE_SEPARATOR_TAG) {
       // Separator found: close current group and start a new one
-      groups.push(currentGroup);
+      roughGroups.push(currentGroup);
       currentGroup = [];
+    } else if (node.classList && node.classList.contains(NO_SLIDE_CLASS)) {
+      // Skip no-slide elements entirely
     } else {
       currentGroup.push(node);
     }
   }
-  // Push the last group (even if empty)
-  groups.push(currentGroup);
+  // Push the last group
+  roughGroups.push(currentGroup);
 
-  return groups;
+  // Split each rough group by <!-- split --> comment nodes, flatten, filter empties
+  const slides = [];
+  for (const group of roughGroups) {
+    const subGroups = splitGroupByComment(group);
+    for (const sub of subGroups) {
+      slides.push(sub);
+    }
+  }
+
+  return slides;
 }
 
 // --- Overlay Construction ---
@@ -255,5 +309,7 @@ if (typeof module !== 'undefined' && module.exports) {
     resetState: () => { slides = []; currentIndex = 0; },
     SLIDE_SEPARATOR_TAG,
     PRESENTATION_CONTENT_SELECTOR,
+    NO_SLIDE_CLASS,
+    SLIDE_SPLIT_COMMENT,
   };
 }
