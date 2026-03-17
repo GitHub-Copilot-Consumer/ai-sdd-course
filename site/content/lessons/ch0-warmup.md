@@ -45,12 +45,12 @@ function calculateDiscount(price, memberLevel) {
 
 ---
 
-### 階段二：對話式生成 (Chat)
+### 階段二：對話式生成 (Chat) / Vibe Coding
 
 **代表工具：** GitHub Copilot Chat、ChatGPT、Claude
 
 **典型使用場景：**
-開發者用自然語言描述需求，AI 生成完整的程式碼片段、解釋錯誤訊息、回答技術問題。
+開發者用自然語言描述需求，AI 生成完整的程式碼片段、解釋錯誤訊息、回答技術問題。在快速原型（Greenfield）階段，這種對話式迭代方式極為有效——俗稱 **Vibe Coding**：不預先設計，跟著感覺迭代，讓想法快速落地。
 
 ```
 開發者：幫我寫一個 Express.js 的 JWT 驗證 middleware
@@ -59,10 +59,15 @@ AI：好的，以下是實作...
 [生成 50 行 middleware 程式碼]
 ```
 
-**主要限制：**
+**Vibe Coding 的真正價值：**
+在 Greenfield 早期，你還不確定「要做什麼」，Vibe Coding 讓你用最低成本探索可能性、驗證想法、快速跑出 MVP。這是 AI 真正發揮速度優勢的場景。
+
+**主要限制（在 Brownfield 階段才真正浮現）：**
 - **Context 短暫性：** 每次新對話都是全新開始，AI 不記得上週討論的架構決策
 - **輸出不穩定：** 同樣的問題不同時間問，可能得到風格迥異的答案
 - **需求無法追溯：** 所有討論只存在於 Chat History，無法與程式碼版本對應
+
+> 重要：這些「限制」在 Greenfield 原型階段通常無傷大雅。問題出在 **MVP 之後繼續用 Vibe Coding 方式開發**——這才是本章「災難現場」的根本原因。
 
 ---
 
