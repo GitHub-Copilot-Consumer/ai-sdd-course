@@ -28,6 +28,11 @@
     background: rgba(255, 255, 255, 0.1);
   }
 
+  /* ── slide-only: hidden in normal doc view, shown only in presentation overlay ── */
+  .content .slide-only {
+    display: none;
+  }
+
   /* ── Presentation Overlay ── */
   #presentation-overlay {
     position: fixed;
@@ -166,6 +171,8 @@
   // ── Constants ──
   const SLIDE_SEPARATOR_TAG = 'HR';
   const PRESENTATION_CONTENT_SELECTOR = '.content';
+  const NO_SLIDE_CLASS = 'no-slide';
+  const SLIDE_SPLIT_COMMENT = 'split';
 
   // ── State ──
   let slides = [];
@@ -173,25 +180,58 @@
 
   // ── Slide Building ──
 
+  function isEmptyGroup(group) {
+    if (group.length === 0) return true;
+    return group.every(
+      function (node) { return node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() === ''; }
+    );
+  }
+
+  function splitGroupByComment(group) {
+    var subGroups = [];
+    var current = [];
+    for (var i = 0; i < group.length; i++) {
+      var node = group[i];
+      if (node.nodeType === Node.COMMENT_NODE && node.nodeValue.trim() === SLIDE_SPLIT_COMMENT) {
+        subGroups.push(current);
+        current = [];
+      } else {
+        current.push(node);
+      }
+    }
+    subGroups.push(current);
+    return subGroups.filter(function (g) { return !isEmptyGroup(g); });
+  }
+
   function buildSlides() {
-    const container = document.querySelector(PRESENTATION_CONTENT_SELECTOR);
+    var container = document.querySelector(PRESENTATION_CONTENT_SELECTOR);
     if (!container) return [];
 
-    const nodes = Array.from(container.childNodes);
-    const groups = [];
-    let currentGroup = [];
+    var nodes = Array.from(container.childNodes);
+    var roughGroups = [];
+    var currentGroup = [];
 
-    for (const node of nodes) {
+    for (var i = 0; i < nodes.length; i++) {
+      var node = nodes[i];
       if (node.nodeName === SLIDE_SEPARATOR_TAG) {
-        groups.push(currentGroup);
+        roughGroups.push(currentGroup);
         currentGroup = [];
+      } else if (node.classList && node.classList.contains(NO_SLIDE_CLASS)) {
+        // skip no-slide elements
       } else {
         currentGroup.push(node);
       }
     }
-    groups.push(currentGroup);
+    roughGroups.push(currentGroup);
 
-    return groups;
+    var slides = [];
+    for (var j = 0; j < roughGroups.length; j++) {
+      var subGroups = splitGroupByComment(roughGroups[j]);
+      for (var k = 0; k < subGroups.length; k++) {
+        slides.push(subGroups[k]);
+      }
+    }
+    return slides;
   }
 
   // ── Overlay Construction ──
