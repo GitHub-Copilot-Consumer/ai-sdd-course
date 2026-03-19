@@ -180,6 +180,81 @@ rules:
 
 ---
 
+## OpenCode Rules 設定
+
+OpenCode 的行為規則（rules）讓你將 AI 的行為準則版本管理化。透過 `AGENTS.md` 與 `opencode.json`，團隊可以共享公共規則，同時為個人保留彈性設定空間。
+
+> **建議：** 將專案的 `AGENTS.md` 提交至 Git，讓所有工程師在同一個 OpenCode 行為基準上協作。
+
+### 專案級規則（AGENTS.md）
+
+在專案根目錄建立 `AGENTS.md`，定義此專案的 AI 行為準則。此檔案 **應提交至 Git**，供全團隊共享。
+
+執行 `/init` 指令可讓 OpenCode 掃描專案並自動生成初始 `AGENTS.md`；你也可以手動建立：
+
+```markdown
+# AI 輔助開發課程網站
+
+這是一個使用 Hugo + Hextra 主題的靜態網站，搭配 OpenSpec CLI 進行規格驅動開發。
+
+## 專案技術
+
+- 框架：Hugo（靜態網站）
+- 內容：`site/content/` 目錄下的 Markdown 檔案
+- 規格管理：OpenSpec CLI，規格存放於 `openspec/specs/`
+
+## 目錄結構
+
+- `site/content/lessons/` — 課程章節內容（ch0–ch6）
+- `openspec/specs/` — 已歸檔的 Capability 規格（事實來源）
+- `openspec/changes/` — 進行中的變更工作空間
+- `openspec/adr/` — Architecture Decision Records
+
+## 開發規範
+
+- 修改課程內容前，先確認對應的 `openspec/specs/` 是否存在
+- 遵循 Trunk-Based Development，所有變更透過 PR 合入 main
+- Commit 訊息遵循 Conventional Commits 格式
+- 完成任務後，同步更新 README.md
+```
+
+### 個人／全域規則
+
+在 `~/.config/opencode/AGENTS.md` 設定個人化規則，例如偏好的程式碼風格、個人常用 Prompt 習慣。
+
+此檔案 **不提交至 Git**，僅作用於個人開發環境，適合放置不適合強制套用到全團隊的個人偏好：
+
+```markdown
+# 我的個人 OpenCode 規則
+
+## 語言偏好
+- 繁體中文回覆
+- 程式碼內的變數與函式名稱使用英文
+
+## 個人工作習慣
+- 每次回覆前先確認我理解需求，避免過早開始實作
+- 提供多個方案時，明確標示推薦選項與理由
+```
+
+### 透過 opencode.json 引用現有文件
+
+若專案已有 `CONTRIBUTING.md`、開發指南、或 OpenSpec 規格等文件，可透過 `opencode.json` 的 `instructions` 欄位直接引用，**無需將規則複製到 `AGENTS.md`**：
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "CONTRIBUTING.md",
+    "docs/development-guidelines.md",
+    "openspec/specs/*/spec.md"
+  ]
+}
+```
+
+所有列出的文件會與 `AGENTS.md` 合併，作為 OpenCode 的規則來源。支援 glob 模式（如 `openspec/specs/*/spec.md`），適合 Monorepo 或規格數量龐大的專案，讓 OpenCode 在實作時能自動參照現有規格。
+
+---
+
 ## 導入 Roadmap
 
 本 Roadmap 依照本課程的 **Greenfield → Brownfield** 兩階段路徑設計。從 Vibe Coding 快速打出第一個 MVP 開始，再逐步將 SDD 引入持續迭代的 Brownfield 開發。
@@ -193,6 +268,7 @@ rules:
 | 舉辦半天工作坊（涵蓋本課程 Ch0–Ch2：Vibe Coding → 轉折點 → Proposal） | Tech Lead | Workshop 議程 + 錄影 |
 | 全員完成工具安裝（Copilot + OpenCode + OpenSpec CLI） | All engineers | 安裝 Checklist 打勾完成（見附錄） |
 | 建立並推送 `.github/copilot-instructions.md` | Tech Lead | PR 合入 main branch |
+| 建立並推送專案 `AGENTS.md`，設定 OpenCode 公共規則 | Tech Lead | `AGENTS.md` PR 合入 main branch |
 | 每人用 Vibe Coding 完成一個小型 MVP 練習 | All engineers | 每人一個練習 repo |
 
 **Greenfield/Brownfield 分界說明（工作坊必講）：**
