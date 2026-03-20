@@ -16,7 +16,7 @@ const RENDER_HOOK_PATH = path.resolve(
   'layouts/_default/_markup/render-codeblock-plantuml.html'
 );
 const SHORTCODE_PATH = path.resolve(SITE_ROOT, 'layouts/shortcodes/plantuml.html');
-const LESSONS_DIR = path.resolve(SITE_ROOT, 'content/lessons');
+const LESSONS_DIR = path.resolve(SITE_ROOT, 'content/sdd');
 
 // -----------------------------------------------------------------------
 // Section 1: Hugo Goldmark config
