@@ -1,5 +1,5 @@
 ---
-title: "課程章節"
+title: "從 AI 輔助到規格驅動 (SDD) 實戰攻略"
 cascade:
   type: docs
 ---

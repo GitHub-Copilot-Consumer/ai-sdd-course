@@ -10,19 +10,17 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const LESSON_URL = '/lessons/ch0-warmup/';
+const LESSON_URL = '/sdd/ch0-warmup/';
 
 // All chapter URLs expected in the sidebar, in weight order
 const CHAPTER_LINKS = [
-  '/lessons/ch-intro-ai/',
-  '/lessons/ch0-warmup/',
-  '/lessons/ch1-vibe-coding/',
-  '/lessons/ch2-mvp-to-spec/',
-  '/lessons/ch3-openspec/',
-  '/lessons/ch4-coding-agent/',
-  '/lessons/ch5-verify-observe/',
-  '/lessons/ch6-team/',
-  '/lessons/appendix-setup/',
+  '/sdd/ch0-warmup/',
+  '/sdd/ch1-vibe-coding/',
+  '/sdd/ch2-mvp-to-spec/',
+  '/sdd/ch3-openspec/',
+  '/sdd/ch4-coding-agent/',
+  '/sdd/ch5-verify-observe/',
+  '/sdd/ch6-team/',
 ];
 
 const MOBILE_VIEWPORT = { width: 375, height: 812 };
@@ -59,7 +57,7 @@ test.describe('Mobile Sidebar Navigation - E2E', () => {
       await hamburger.click();
 
       const sidebar = page.locator('.hextra-sidebar-container');
-      const links = sidebar.locator('a[href^="/lessons/"]');
+      const links = sidebar.locator('a[href^="/sdd/"]');
       const hrefs = await links.evaluateAll(anchors =>
         anchors.map(a => a.getAttribute('href'))
       );

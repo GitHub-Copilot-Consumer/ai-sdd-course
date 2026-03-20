@@ -10,20 +10,20 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('PlantUML Rendering - E2E', () => {
   test('ch2 lesson page renders plantuml diagram as SVG', async ({ page }) => {
-    await page.goto('/lessons/ch2-mvp-to-spec/');
+    await page.goto('/sdd/ch2-mvp-to-spec/');
     // The PlantUML render hook should embed <svg> elements in the page
     const svgElements = page.locator('svg');
     await expect(svgElements.first()).toBeVisible();
   });
 
   test('ch3 lesson page renders plantuml diagram as SVG', async ({ page }) => {
-    await page.goto('/lessons/ch3-openspec/');
+    await page.goto('/sdd/ch3-openspec/');
     const svgElements = page.locator('svg');
     await expect(svgElements.first()).toBeVisible();
   });
 
   test('plantuml diagram SVG has non-zero dimensions', async ({ page }) => {
-    await page.goto('/lessons/ch2-mvp-to-spec/');
+    await page.goto('/sdd/ch2-mvp-to-spec/');
     const svg = page.locator('svg').first();
     await expect(svg).toBeVisible();
     const box = await svg.boundingBox();
