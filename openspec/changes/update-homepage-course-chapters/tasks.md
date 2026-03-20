@@ -6,8 +6,8 @@
 
 ## 2. 更新首頁課程章節清單
 
-- [ ] 2.1 修改 `site/content/_index.md`，將「課程章節」區塊的連結清單替換為設計文件中的 9 個正確連結（依序：導言、ch0-ch6、附錄）
-- [ ] 2.2 確認舊的錯誤連結（`/lessons/ch1-copilot/`、`/lessons/ch2-sdd/`、`/lessons/ch4-opencode/`、`/lessons/ch5-team/`）已從檔案中移除
+- [x] 2.1 修改 `site/content/_index.md`，將「課程章節」區塊的連結清單替換為設計文件中的 9 個正確連結（依序：導言、ch0-ch6、附錄）
+- [x] 2.2 確認舊的錯誤連結（`/lessons/ch1-copilot/`、`/lessons/ch2-sdd/`、`/lessons/ch4-opencode/`、`/lessons/ch5-team/`）已從檔案中移除
 - [ ] 2.3 git commit: `fix: update homepage course chapter links to match current lesson slugs`
 
 ## 3. 驗證
