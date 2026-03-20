@@ -12,10 +12,10 @@
 
 ## 3. 驗證
 
-- [ ] 3.1 執行測試腳本 `scripts/test-homepage-links.sh`，確認所有 9 個連結驗證通過（綠燈）
+- [x] 3.1 執行測試腳本 `scripts/test-homepage-links.sh`，確認所有 9 個連結驗證通過（綠燈）
 - [ ] 3.2 在本地以 `hugo server` 啟動站點，目視確認首頁顯示正確的 9 個章節連結且各連結可正常跳轉
 
 ## 4. 同步文件
 
-- [ ] 4.1 更新 `README.md`，同步反映最新課程章節清單（如 README 中有章節連結的話）
-- [ ] 4.2 git commit: `docs: sync README with updated course chapter list`
+- [x] 4.1 更新 `README.md`，同步反映最新課程章節清單（如 README 中有章節連結的話）
+- [x] 4.2 git commit: `docs: sync README with updated course chapter list`
