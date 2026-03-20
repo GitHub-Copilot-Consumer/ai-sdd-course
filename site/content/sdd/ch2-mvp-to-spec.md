@@ -9,6 +9,7 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **認識** MVP 之後的三條路，並說明為何「正式化」是最好的選擇
@@ -16,6 +17,7 @@ showToc: true
 - **解釋** TDD 與 SDD 的差異，並說明在 Vibe Coding 後的 MVP 情境下，為何需要 SDD
 - **執行** 在 MVP 專案上初始化 OpenSpec 的完整流程
 - **整合** OpenSpec validate 進入 GitHub Actions CI/CD 流水線
+{{< /callout >}}
 
 ---
 

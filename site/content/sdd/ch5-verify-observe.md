@@ -9,6 +9,7 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **認識** 可觀測性三本柱（Logs / Traces / Metrics）及其串接方式
@@ -17,6 +18,7 @@ showToc: true
 - **使用** AI 為既有 Brownfield 程式碼加入 structured logging 與 error tracking
 - **操作** `/opsx:explore` 在既有 codebase 中調查問題
 - **完成** `openspec archive` 歸檔，讓規格成為活文件
+{{< /callout >}}
 
 ---
 

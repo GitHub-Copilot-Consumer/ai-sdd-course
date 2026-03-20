@@ -30,12 +30,14 @@ graph TD
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **執行** OpenSpec 完整工作流（new → ff/propose → apply → verify → archive）
 - **操作** 每個 OPSX 指令，並理解其輸入、輸出與適用時機
 - **應用** 多工並行，同時維護兩個 change 而不混亂
 - **完成** 從 Proposal 生成完整 Technical Spec 的完整流程
+{{< /callout >}}
 
 ---
 

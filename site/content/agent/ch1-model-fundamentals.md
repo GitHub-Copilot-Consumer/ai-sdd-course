@@ -9,12 +9,14 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **說明** Token 化與機率生成機制的基本原理
 - **解釋** Context Window 對 Agent 行為的影響
 - **比較** 主流模型的能力差異，依任務特性進行選型
 - **評估** 溫度參數（Temperature）對輸出品質的影響
+{{< /callout >}}
 
 ---
 

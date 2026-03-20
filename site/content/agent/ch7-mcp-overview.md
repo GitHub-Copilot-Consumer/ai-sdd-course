@@ -9,12 +9,14 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **解釋** MCP（Model Context Protocol）的設計目標與標準化意義
 - **描述** MCP Server 提供 Tools、Resources、Prompts 的三種能力類型
 - **配置** OpenCode 使用現有的第三方 MCP Server
 - **判斷** 何時使用 MCP 整合 vs. 直接實作 OpenCode Plugin
+{{< /callout >}}
 
 ---
 

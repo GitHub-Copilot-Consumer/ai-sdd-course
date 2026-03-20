@@ -9,12 +9,14 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **解釋** Tool 作為 Agent 延伸能力的設計理念
 - **描述** OpenCode Plugin SDK 的高層架構（不深入 TypeScript 實作細節）
 - **識別** 適合封裝為 Tool 的場景：外部 API、CLI 指令、資料查詢
 - **了解** Tool 的 schema 定義與 Agent 如何選擇正確的 Tool
+{{< /callout >}}
 
 ---
 

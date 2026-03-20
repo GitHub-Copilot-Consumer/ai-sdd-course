@@ -9,12 +9,14 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **設計** Custom Agent 的角色定義、系統提示與工具組合
 - **實作** Slash Command 以封裝常用的 Agent 工作流
 - **配置** `opencode.json` 中的 agents 與 commands 區塊
 - **評估** Multi-agent 協作的適用場景與協調策略
+{{< /callout >}}
 
 ---
 

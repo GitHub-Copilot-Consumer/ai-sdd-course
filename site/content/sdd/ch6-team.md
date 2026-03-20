@@ -9,12 +9,14 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **使用** 模型選擇決策樹，為不同任務場景選擇適當的 AI 工具與模型
 - **建立** 符合團隊習慣的 `openspec/` 標準目錄結構與設定
 - **規劃** 一個實際可執行的導入 Roadmap，區分 Greenfield 與 Brownfield 階段
 - **定義** 人機協作的明確邊界，建立團隊的 Code Review Checklist
+{{< /callout >}}
 
 ---
 

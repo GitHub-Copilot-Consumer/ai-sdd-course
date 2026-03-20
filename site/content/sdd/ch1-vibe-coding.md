@@ -9,6 +9,7 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **理解** Vibe Coding 的定義與適用場景，以及何時應該停止
@@ -16,6 +17,7 @@ showToc: true
 - **撰寫** 符合 Role Prompting、Chain of Thought、Negative Prompting 的進階 Prompt
 - **建立** 團隊共用的 `.github/copilot-instructions.md`，讓 AI 遵守團隊技術規範
 - **完成** 一個用 Vibe Coding 打出的能動 MVP，並體驗轉折點的感覺
+{{< /callout >}}
 
 ---
 

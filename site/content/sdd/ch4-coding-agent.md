@@ -9,12 +9,14 @@ showToc: true
 
 ## 學習目標
 
+{{< callout emoji="🎯" >}}
 本章結束後，你將能夠：
 
 - **操作** Plan Mode 與 Build Mode 的切換，在正確時機使用各自模式
 - **應用** Brownfield 開發注意事項，安全地在既有 codebase 上實作
 - **執行** 依 `tasks.md` 逐步完成 Coding Agent 實作流程
 - **完成** 將 Ch3 的 Technical Spec 落地為實際程式碼
+{{< /callout >}}
 
 ---
 
@@ -31,19 +33,116 @@ OpenCode 支援 75+ 模型供應商，讓你根據任務特性選擇最適合的
 
 ```bash
 # 查看可用模型
-opencode models list
+opencode models 
 
 # 輸出範例
-Available models:
-  anthropic/claude-sonnet-4-6  (current)
-  anthropic/claude-opus-4
-  openai/gpt-4o
-  openai/gpt-4o-mini
-  ollama/llama3               (local, offline)
-  ollama/codestral            (local, offline)
+opencode/big-pickle
+opencode/gpt-5-nano
+opencode/mimo-v2-omni-free
+opencode/mimo-v2-pro-free
+opencode/minimax-m2.5-free
+opencode/nemotron-3-super-free
+aihub/claude37
+aihub/claude45
+aihub/gemini2.5flash
+aihub/gemini2.5pro
+aihub/gpt41
+aihub/gpt41-mini
+anthropic/claude-3-5-haiku-20241022
+anthropic/claude-3-5-haiku-latest
+anthropic/claude-3-5-sonnet-20240620
+anthropic/claude-3-5-sonnet-20241022
+anthropic/claude-3-7-sonnet-20250219
+anthropic/claude-3-7-sonnet-latest
+anthropic/claude-3-haiku-20240307
+anthropic/claude-3-opus-20240229
+anthropic/claude-3-sonnet-20240229
+anthropic/claude-haiku-4-5
+anthropic/claude-haiku-4-5-20251001
+anthropic/claude-opus-4-0
+anthropic/claude-opus-4-1
+anthropic/claude-opus-4-1-20250805
+anthropic/claude-opus-4-20250514
+anthropic/claude-opus-4-5
+anthropic/claude-opus-4-5-20251101
+anthropic/claude-opus-4-6
+anthropic/claude-sonnet-4-0
+anthropic/claude-sonnet-4-20250514
+anthropic/claude-sonnet-4-5
+anthropic/claude-sonnet-4-5-20250929
+anthropic/claude-sonnet-4-6
+github-copilot/claude-haiku-4.5
+github-copilot/claude-opus-4.5
+github-copilot/claude-opus-4.6
+github-copilot/claude-opus-41
+github-copilot/claude-sonnet-4
+github-copilot/claude-sonnet-4.5
+github-copilot/claude-sonnet-4.6
+github-copilot/gemini-2.5-pro
+github-copilot/gemini-3-flash-preview
+github-copilot/gemini-3-pro-preview
+github-copilot/gemini-3.1-pro-preview
+github-copilot/gpt-4.1
+github-copilot/gpt-4o
+github-copilot/gpt-5
+github-copilot/gpt-5-mini
+github-copilot/gpt-5.1
+github-copilot/gpt-5.1-codex
+github-copilot/gpt-5.1-codex-max
+github-copilot/gpt-5.1-codex-mini
+github-copilot/gpt-5.2
+github-copilot/gpt-5.2-codex
+github-copilot/gpt-5.3-codex
+github-copilot/gpt-5.4
+github-copilot/gpt-5.4-mini
+github-copilot/grok-code-fast-1
+google/antigravity-gemini-3-flash
+google/antigravity-gemini-3-pro-high
+google/antigravity-gemini-3-pro-low
+google/gemini-1.5-flash
+google/gemini-1.5-flash-8b
+google/gemini-1.5-pro
+google/gemini-2.0-flash
+google/gemini-2.0-flash-lite
+google/gemini-2.5-flash
+google/gemini-2.5-flash-image
+google/gemini-2.5-flash-image-preview
+google/gemini-2.5-flash-lite
+google/gemini-2.5-flash-lite-preview-06-17
+google/gemini-2.5-flash-lite-preview-09-2025
+google/gemini-2.5-flash-preview-04-17
+google/gemini-2.5-flash-preview-05-20
+google/gemini-2.5-flash-preview-09-2025
+google/gemini-2.5-flash-preview-tts
+google/gemini-2.5-pro
+google/gemini-2.5-pro-preview-05-06
+google/gemini-2.5-pro-preview-06-05
+google/gemini-2.5-pro-preview-tts
+google/gemini-3-flash-preview
+google/gemini-3-pro-preview
+google/gemini-3.1-flash-image-preview
+google/gemini-3.1-flash-lite-preview
+google/gemini-3.1-pro-preview
+google/gemini-3.1-pro-preview-customtools
+google/gemini-embedding-001
+google/gemini-flash-latest
+google/gemini-flash-lite-latest
+google/gemini-live-2.5-flash
+google/gemini-live-2.5-flash-preview-native-audio
+ollama-local/gpt-oss:20b
+openai/codex-mini-latest
+openai/gpt-5-codex
+openai/gpt-5.1-codex
+openai/gpt-5.1-codex-max
+openai/gpt-5.1-codex-mini
+openai/gpt-5.2
+openai/gpt-5.2-codex
+openai/gpt-5.3-codex
+openai/gpt-5.3-codex-spark
+openai/gpt-5.4
 
-# 切換模型
-opencode --model openai/gpt-4o
+# 啟動 OpenCode TUI 並且使用該模型
+opencode --model github-copilot/claude-sonnet-4.6
 ```
 
 ### 混合架構策略 (Hybrid Architecture)
