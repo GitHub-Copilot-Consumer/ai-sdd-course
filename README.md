@@ -28,7 +28,8 @@ site/
 │   ├── assignments/               # 作業
 │   └── resources/
 │       ├── commands.md            # 常用 OPSX 指令速查
-│       └── everything-claude-code.md  # everything-claude-code 資源介紹
+│       ├── everything-claude-code.md  # everything-claude-code 資源介紹
+│       └── agent-skills-standard.md   # Agent Skills 標準與 Anthropic 官方 skills 倉庫介紹
 ├── themes/                        # (不使用 submodule，主題由 Hugo Module 管理)
 └── config.yaml                    # Hugo 設定檔
 ```
