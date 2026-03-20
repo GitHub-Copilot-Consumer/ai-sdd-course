@@ -14,6 +14,10 @@ menu:
     - name: "相關資源"
       url: "/resources/"
       weight: 30
+  sidebar:
+    - name: "相關資源"
+      url: "/resources/"
+      weight: 10
 
 markup:
   goldmark:
