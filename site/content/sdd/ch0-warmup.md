@@ -7,6 +7,8 @@ showToc: true
 
 > 建立共同語言，理解為何單純的「對話式 AI」已不足以應對企業級開發。
 
+> 💡 **想深入 Agent 原理與 OpenCode 擴展機制？** 歡迎前往 [Agent 整合與自訂擴展](/agent/) 課程，從 LLM 原理到 Skills、Tools 與 MCP 整合一次掌握。
+
 ## 學習目標
 
 本章結束後，你將能夠：

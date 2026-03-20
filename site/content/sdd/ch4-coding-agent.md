@@ -19,7 +19,7 @@ showToc: true
 ---
 
 > **開始前，請確認已完成工具安裝。**  
-> 若尚未安裝 OpenCode 及設定 API Key，請先前往[附錄：工具安裝與環境設定](../appendix-setup)完成安裝。
+> 若尚未安裝 OpenCode 及設定 API Key，請先前往[附錄：工具安裝與環境設定](/appendix/setup/)完成安裝。
 
 ---
 
