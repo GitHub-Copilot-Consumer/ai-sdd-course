@@ -66,7 +66,10 @@ Action required: Fix drift before archiving
 
 當 `verify` 發現 Drift，不要直接手動修程式碼——按照 SDD 流程處理：
 
-**Step 1：回到 tasks.md，補充遺漏的 task**
+{{% steps %}}
+
+### 回到 tasks.md，補充遺漏的 task
+
 ```markdown
 ## Tasks
 
@@ -75,7 +78,8 @@ Action required: Fix drift before archiving
 - [ ] **[補充]** 加入 DELETE 的 404 處理（來自 verify drift）
 ```
 
-**Step 2：在 OpenCode 中執行 apply，完成補充的 task**
+### 在 OpenCode 中執行 apply，完成補充的 task
+
 ```
 [Build Mode]
 /opsx-apply formalize-todo-api
@@ -84,11 +88,14 @@ Action required: Fix drift before archiving
 加入 DELETE /todos/:id 的 404 驗證
 ```
 
-**Step 3：重新執行 verify**
+### 重新執行 verify
+
 ```bash
 openspec verify --change "formalize-todo-api"
 # 直到全部通過
 ```
+
+{{% /steps %}}
 
 **重要原則：** Drift 是正常的。完美的 Spec 不存在，`verify` 的目的不是懲罰你，而是讓你知道「還差哪一步」。
 
@@ -161,27 +168,31 @@ test('刪除不存在的 todo 應返回 404', async () => {
 
 **三者缺一不可**。單獨使用時，每個柱子都有盲點；組合使用時，它們形成完整的問題排查 workflow：
 
-```
-問題排查 Workflow：
+{{% steps %}}
 
-  📊 Metrics 告訴你「有問題」
-  ─────────────────────────────────────────────────────
-  error_rate 從 0.1% 跳到 5% → 警報觸發
-                                      │
-                                      ▼
-  📋 Logs 告訴你「什麼問題」
-  ─────────────────────────────────────────────────────
-  篩選 error log → 找到:
-  "TypeError: Cannot read property 'id' of null"
-  at TodoService.delete (todo.service.js:52)
-                                      │
-                                      ▼
-  🔗 Traces 告訴你「問題在哪裡」
-  ─────────────────────────────────────────────────────
-  追蹤 traceId → 找到請求路徑中
-  Span: todo.delete [45ms] ← 超時
-    └─ Span: db.query  [43ms] ← 瓶頸在這裡
+### 📊 Metrics 告訴你「有問題」
+
+`error_rate` 從 0.1% 跳到 5% → 警報觸發
+
+### 📋 Logs 告訴你「什麼問題」
+
+篩選 error log → 找到：
+
 ```
+"TypeError: Cannot read property 'id' of null"
+at TodoService.delete (todo.service.js:52)
+```
+
+### 🔗 Traces 告訴你「問題在哪裡」
+
+追蹤 `traceId` → 找到請求路徑中：
+
+```
+Span: todo.delete [45ms] ← 超時
+  └─ Span: db.query  [43ms] ← 瓶頸在這裡
+```
+
+{{% /steps %}}
 
 ---
 
@@ -567,23 +578,27 @@ openspec status --change "formalize-todo-api"
 
 ### Part 1：Spec 驗證
 
-**Step 1：執行 verify**
+{{% steps %}}
+
+### 執行 verify
 
 ```bash
 openspec verify --change "formalize-todo-api"
 ```
 
-**Step 2：記錄結果**
+### 記錄結果
 
 - 如果全部通過 → 直接進入 Part 2
-- 如果有 DRIFT → 繼續 Step 3
+- 如果有 DRIFT → 繼續下一步
 
-**Step 3：修復 Drift（如有）**
+### 修復 Drift（如有）
 
 按照本章「修復 Drift 的標準流程」處理：
 1. 在 `tasks.md` 補充對應的修復 task
 2. 用 OpenCode Build Mode 完成修復
 3. 重新執行 `openspec verify` 直到全部通過
+
+{{% /steps %}}
 
 ---
 
@@ -591,9 +606,9 @@ openspec verify --change "formalize-todo-api"
 
 **目標：** 為 Todo API 加入 Logs、Traces、Metrics 三層可觀測性。
 
----
+{{% steps %}}
 
-#### Step 1：Logs（Structured Logging）
+### Logs（Structured Logging）
 
 **安裝 pino**
 
@@ -625,9 +640,7 @@ curl -X POST http://localhost:3000/todos \
 # {"level":"info","method":"POST","path":"/todos","statusCode":201,"durationMs":12}
 ```
 
----
-
-#### Step 2：Traces（OpenTelemetry）
+### Traces（OpenTelemetry）
 
 **安裝 OpenTelemetry SDK**
 
@@ -659,9 +672,7 @@ curl -X GET http://localhost:3000/todos
 # 2. pino log 中包含 "traceId" 欄位
 ```
 
----
-
-#### Step 3：Metrics（prom-client）
+### Metrics（prom-client）
 
 **安裝 prom-client**
 
@@ -702,6 +713,8 @@ curl http://localhost:3000/metrics
 curl http://localhost:3000/health
 # {"status":"ok","uptime":42.1,"timestamp":"2024-01-01T00:00:00.000Z"}
 ```
+
+{{% /steps %}}
 
 ---
 

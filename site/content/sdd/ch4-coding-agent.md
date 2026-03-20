@@ -305,7 +305,9 @@ Coding Agent 的 context window 有限。長對話後，早期的指令可能已
 
 ### 執行流程
 
-**Step 1：確認 Spec 狀態**
+{{% steps %}}
+
+### 確認 Spec 狀態
 
 ```bash
 openspec status --change "formalize-todo-api"
@@ -321,7 +323,7 @@ Change: formalize-todo-api
 Status: ready for implementation
 ```
 
-**Step 2：先用 Plan Mode 理解整體任務**
+### 先用 Plan Mode 理解整體任務
 
 在 OpenCode 中切換到 Plan Mode，輸入：
 ```
@@ -335,7 +337,7 @@ Status: ready for implementation
 
 確認分析合理後，切換到 Build Mode 開始實作。
 
-**Step 3：Build Mode 依序完成 tasks**
+### Build Mode 依序完成 tasks
 
 ```
 [Build Mode]
@@ -361,13 +363,15 @@ Working on task 2/6: 加入 404 處理（刪除不存在的 todo）
 ...
 ```
 
-**Step 4：遇到阻礙時**
+### 遇到阻礙時
 
 如果 AI 在某個 task 卡住或方向錯誤：
 
 1. 中斷當前操作（`Ctrl+C`）
 2. 切換到 Plan Mode，重新分析這個 task
 3. 手動提供更具體的指引後，再切回 Build Mode 繼續
+
+{{% /steps %}}
 
 ---
 

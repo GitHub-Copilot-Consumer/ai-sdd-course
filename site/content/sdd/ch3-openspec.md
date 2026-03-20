@@ -334,7 +334,9 @@ openspec/changes/
 - 完成 Ch2 Lab（`openspec/changes/formalize-todo-api/proposal.md` 存在）
 - OpenCode 已啟動並開啟 Todo MVP 專案目錄
 
-**Step 1：在 OpenCode 中開啟 Change**
+{{% steps %}}
+
+### 在 OpenCode 中開啟 Change
 
 確認你的 change 目前狀態：
 ```bash
@@ -349,7 +351,7 @@ Change: formalize-todo-api
   ✗ tasks.md
 ```
 
-**Step 2：用 Fast-Forward 生成剩餘 Artifacts**
+### 用 Fast-Forward 生成剩餘 Artifacts
 
 在 OpenCode Chat 中輸入：
 ```
@@ -361,17 +363,19 @@ AI 會依序生成：
 2. `specs/todo-api/spec.md`：具體需求與驗收場景（Given/When/Then 格式）
 3. `tasks.md`：可執行的實作清單
 
-**Step 3：審閱生成的 Spec**
+### 審閱生成的 Spec
 
 重點檢查 `specs/todo-api/spec.md` 中的每個 Scenario：
 - Scenario 是否覆蓋了你在 Ch2 Lab 列出的邊界情況（空 title、不存在的 id）？
 - 如果有遺漏，直接編輯 `spec.md` 補充，然後執行 `/opsx-continue` 重新生成 `tasks.md`
 
-**Step 4：確認 Tasks 合理**
+### 確認 Tasks 合理
 
 打開 `tasks.md`，確認每個 task 的粒度合適：
 - 太大的 task（「實作整個 API」）→ 手動拆分成更小的步驟
 - 每個 task 應在 30 分鐘內完成
+
+{{% /steps %}}
 
 **Done criteria：**
 - `openspec/changes/formalize-todo-api/design.md` 存在

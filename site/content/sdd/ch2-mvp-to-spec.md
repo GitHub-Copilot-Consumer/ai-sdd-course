@@ -181,13 +181,15 @@ SDD 的前提是：**AI 需要外部的「做什麼」指引**，才能自主完
 - npm 9.x 或以上（`npm --version` 確認）
 - Git 已初始化的專案目錄（你的 Todo MVP 目錄）
 
-### Step 1：進入 MVP 專案目錄
+{{% steps %}}
+
+### 進入 MVP 專案目錄
 
 ```bash
 cd todo-mvp   # 你在 Ch1 建立的 MVP 專案
 ```
 
-### Step 2：在 MVP 專案中初始化 OpenSpec
+### 在 MVP 專案中初始化 OpenSpec
 
 ```bash
 openspec init
@@ -202,7 +204,7 @@ openspec init
 OpenSpec initialized successfully!
 ```
 
-### Step 3：確認目錄結構
+### 確認目錄結構
 
 初始化後，你的 MVP 專案應該包含：
 
@@ -217,7 +219,7 @@ todo-mvp/
 └── package.json
 ```
 
-### Step 4：建立第一個 Change（驗證環境正常）
+### 建立第一個 Change（驗證環境正常）
 
 ```bash
 openspec new change "formalize-todo-api"
@@ -227,6 +229,8 @@ openspec new change "formalize-todo-api"
 ```
 ✔ Created change 'formalize-todo-api' at openspec/changes/formalize-todo-api/
 ```
+
+{{% /steps %}}
 
 ---
 

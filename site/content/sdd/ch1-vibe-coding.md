@@ -254,17 +254,21 @@ Copilot Chat 提供三種 Context 控制方式：
 
 **建立步驟：**
 
-**Step 1：** 在專案根目錄建立 `.github/` 資料夾（如果不存在）
+{{% steps %}}
+
+### 在專案根目錄建立 `.github/` 資料夾（如果不存在）
+
 ```bash
 mkdir -p .github
 ```
 
-**Step 2：** 建立 `copilot-instructions.md` 檔案
+### 建立 `copilot-instructions.md` 檔案
+
 ```bash
 touch .github/copilot-instructions.md
 ```
 
-**Step 3：** 填入以下最小可用範本：
+### 填入以下最小可用範本
 
 ```markdown
 # 團隊 AI 行為規範
@@ -290,6 +294,8 @@ touch .github/copilot-instructions.md
 - 資料庫查詢集中在 Repository layer，不在 Controller 直接查詢
 - 新功能必須附上對應的 unit test
 ```
+
+{{% /steps %}}
 
 **生效驗證方式：**
 開啟 Copilot Chat，輸入：`你現在遵守的編碼規範是什麼？`
